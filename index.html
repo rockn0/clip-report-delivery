@@ -3,67 +3,112 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CLIP Campaign Report · Sep 30, 2026</title>
+<title>Clip Ops · Justin · Workflow</title>
 <style>
-  :root { color-scheme: dark; }
-  * { box-sizing: border-box; }
-  body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:#0b0b0f; color:#f4f4f5; min-height:100dvh; padding:24px 16px 40px; }
-  main { width:min(760px,100%); margin:0 auto; }
-  .intro { background:#16161d; border:1px solid #2a2a35; border-radius:20px; padding:24px 20px; margin-bottom:16px; box-shadow:0 20px 60px rgba(0,0,0,.28); }
-  h1 { font-size:1.35rem; margin:0 0 6px; letter-spacing:-.02em; }
-  h2 { font-size:1.05rem; margin:0 0 14px; }
-  p { margin:0 0 16px; color:#a1a1aa; font-size:.95rem; line-height:1.45; }
-  .gallery { display:grid; gap:16px; }
-  .card { background:#16161d; border:1px solid #2a2a35; border-radius:20px; padding:16px; overflow:hidden; }
-  .art-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-  .art { display:block; color:#f4f4f5; text-decoration:none; }
-  .art img { display:block; width:100%; height:clamp(120px,28vw,220px); object-fit:cover; border-radius:12px; background:#22222c; }
-  .art span { display:block; margin-top:7px; color:#a1a1aa; font-size:.8rem; }
-  .actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
-  .btn { flex:1 1 150px; display:block; text-align:center; text-decoration:none; padding:13px 14px; border-radius:12px; font-weight:700; font-size:.92rem; }
-  .primary { background:#efe7ff; color:#1a1028; }
-  .secondary { background:#22222c; color:#f4f4f5; border:1px solid #3a3a48; }
-  .note { font-size:.8rem; color:#71717a; margin:16px 0 0; }
-  @media (max-width:480px) { body { padding:14px 12px 28px; } .intro,.card { border-radius:16px; } .intro { padding:20px 16px; } .card { padding:12px; } .art-grid { gap:8px; } }
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#0b0b0f;color:#f4f4f5}
+nav{position:sticky;top:0;z-index:9;display:flex;gap:8px;flex-wrap:wrap;padding:10px 12px;background:#0b0b0fe6;border-bottom:1px solid #2a2a35;backdrop-filter:blur(8px)}
+nav a{color:#efe7ff;text-decoration:none;font-weight:700;font-size:.85rem;padding:8px 10px;border-radius:999px;background:#22222c;border:1px solid #3a3a48}
+main{max-width:900px;margin:0 auto;padding:16px 14px 48px}
+h1{font-size:1.45rem;margin:8px 0 4px}
+h2{font-size:1.1rem;margin:28px 0 10px;border-top:1px solid #2a2a35;padding-top:18px}
+p,.muted{color:#a1a1aa;line-height:1.4}
+.card{background:#16161d;border:1px solid #2a2a35;border-radius:16px;padding:14px;margin:10px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+img{width:100%;border-radius:12px;display:block;background:#222}
+.btn{display:inline-block;margin:4px 6px 4px 0;padding:12px 14px;border-radius:12px;font-weight:700;text-decoration:none;background:#efe7ff;color:#1a1028}
+.btn2{background:#22222c;color:#f4f4f5;border:1px solid #3a3a48}
+ul{padding-left:18px}
+li{margin:6px 0}
+@media(max-width:520px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<nav>
+  <a href="#today">Today</a>
+  <a href="#assets">Assets</a>
+  <a href="#briefs">Briefs</a>
+  <a href="#packs">Packs</a>
+  <a href="#report">Report</a>
+</nav>
 <main>
-  <section class="intro">
-    <h1>CLIP · Campaign Report</h1>
-    <p>September 30, 2026 draft — Kai/Kinse v2 show art and campaign report, ready to open on iPhone or Windows.</p>
-    <a class="btn primary" href="./CLIP-Campaign-Report-2026-09-30.pdf" download>Download report PDF</a>
-    <p class="note">Tap any image to open the full-size JPG. On iPhone, use Share → Save to Files.</p>
-  </section>
+  <h1>Clip Ops · Justin</h1>
+  <p class="muted">Sep 30, 2026 · ship-now hub (iPhone + PC). Draft only — you run Discord /campaign setup.</p>
 
-  <section class="gallery" aria-label="Kai/Kinse v2 show art">
-    <article class="card">
-      <h2>01 · Sandisk</h2>
-      <div class="art-grid">
-        <a class="art" href="./01-sandisk-logo.jpg"><img src="./01-sandisk-logo.jpg" alt="Sandisk logo" loading="lazy"><span>Open logo JPG</span></a>
-        <a class="art" href="./01-sandisk-banner.jpg"><img src="./01-sandisk-banner.jpg" alt="Sandisk banner" loading="lazy"><span>Open banner JPG</span></a>
-      </div>
-      <div class="actions"><a class="btn secondary" href="./CLIP-Campaign-Report-2026-09-30.pdf">Open report PDF</a></div>
-    </article>
+  <h2 id="today">Today’s launches</h2>
 
-    <article class="card">
-      <h2>02 · AIReg</h2>
-      <div class="art-grid">
-        <a class="art" href="./02-aireg-logo.jpg"><img src="./02-aireg-logo.jpg" alt="AIReg logo" loading="lazy"><span>Open logo JPG</span></a>
-        <a class="art" href="./02-aireg-banner.jpg"><img src="./02-aireg-banner.jpg" alt="AIReg banner" loading="lazy"><span>Open banner JPG</span></a>
-      </div>
-      <div class="actions"><a class="btn secondary" href="./CLIP-Campaign-Report-2026-09-30.pdf">Open report PDF</a></div>
-    </article>
+  <div class="card">
+    <h3>1 · Sandisk Stream</h3>
+    <p class="muted">Attach logo + banner to campaign-details. Spell <b>Sandisk</b>. OP is a person.</p>
+    <div class="grid">
+      <a href="assets/today/CLIP-Sandisk-LOGO.png"><img src="assets/today/CLIP-Sandisk-LOGO.png" alt="Sandisk logo"/><span class="muted">Logo PNG</span></a>
+      <a href="assets/today/CLIP-Sandisk-BANNER.png"><img src="assets/today/CLIP-Sandisk-BANNER.png" alt="Sandisk banner"/><span class="muted">Banner PNG</span></a>
+    </div>
+    <p>
+      <a class="btn" href="packs/01-sandisk-FULL-PASTE.md">Discord pack</a>
+      <a class="btn btn2" href="briefs/1AKw2SXxzsU-tMZOZFsFw7HSjUfkL1JJvBIFc_g-XCds.txt">Brief</a>
+    </p>
+  </div>
 
-    <article class="card">
-      <h2>03 · Silver</h2>
-      <div class="art-grid">
-        <a class="art" href="./03-silver-logo.jpg"><img src="./03-silver-logo.jpg" alt="Silver logo" loading="lazy"><span>Open logo JPG</span></a>
-        <a class="art" href="./03-silver-banner.jpg"><img src="./03-silver-banner.jpg" alt="Silver banner" loading="lazy"><span>Open banner JPG</span></a>
-      </div>
-      <div class="actions"><a class="btn secondary" href="./CLIP-Campaign-Report-2026-09-30.pdf">Open report PDF</a></div>
-    </article>
-  </section>
+  <div class="card">
+    <h3>2 · AI Regulation</h3>
+    <div class="grid">
+      <a href="assets/today/CLIP-AI-Regulation-v2-LOGO.png"><img src="assets/today/CLIP-AI-Regulation-v2-LOGO.png" alt="AI Reg logo"/></a>
+      <a href="assets/today/CLIP-AI-Regulation-v2-BANNER.png"><img src="assets/today/CLIP-AI-Regulation-v2-BANNER.png" alt="AI Reg banner"/></a>
+    </div>
+    <p>
+      <a class="btn" href="packs/02-ai-regulation-FULL-PASTE.md">Discord pack</a>
+      <a class="btn btn2" href="briefs/13rQhyphA-4mFIEFhasUgV13XldEQyGdNroWdeu5w_Yo.txt">Brief</a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>3 · The Man With the Silver Case</h3>
+    <div class="grid">
+      <a href="assets/today/CLIP-Silver-Case-LOGO.png"><img src="assets/today/CLIP-Silver-Case-LOGO.png" alt="Silver Case logo"/></a>
+      <a href="assets/today/CLIP-Silver-Case-BANNER.png"><img src="assets/today/CLIP-Silver-Case-BANNER.png" alt="Silver Case banner"/></a>
+    </div>
+    <p>
+      <a class="btn" href="packs/03-silver-case-FULL-PASTE.md">Discord pack</a>
+      <a class="btn btn2" href="briefs/1Fx4_wKTOHVaKcuurJ_MZ0tNqHb9kMmct_Zp8uSwBAVg.txt">Brief</a>
+    </p>
+  </div>
+
+  <h2 id="assets">Assets</h2>
+  <div class="card">
+    <ul>
+      <li><a href="assets/today/CLIP-Sandisk-LOGO.png">Sandisk logo PNG</a> · <a href="assets/today/CLIP-Sandisk-BANNER.png">banner PNG</a> · <a href="assets/today/01-sandisk-logo.jpg">jpg logo</a> · <a href="assets/today/01-sandisk-banner.jpg">jpg banner</a></li>
+      <li><a href="assets/today/CLIP-AI-Regulation-v2-LOGO.png">AI Reg logo PNG</a> · <a href="assets/today/CLIP-AI-Regulation-v2-BANNER.png">banner PNG</a></li>
+      <li><a href="assets/today/CLIP-Silver-Case-LOGO.png">Silver Case logo PNG</a> · <a href="assets/today/CLIP-Silver-Case-BANNER.png">banner PNG</a></li>
+    </ul>
+  </div>
+
+  <h2 id="briefs">Briefs</h2>
+  <div class="card">
+    <ul>
+      <li><a href="briefs/1AKw2SXxzsU-tMZOZFsFw7HSjUfkL1JJvBIFc_g-XCds.txt">Sandisk Combined Creators</a></li>
+      <li><a href="briefs/13rQhyphA-4mFIEFhasUgV13XldEQyGdNroWdeu5w_Yo.txt">AI Regulation 2</a></li>
+      <li><a href="briefs/1Fx4_wKTOHVaKcuurJ_MZ0tNqHb9kMmct_Zp8uSwBAVg.txt">The Man With the Silver Case</a></li>
+    </ul>
+  </div>
+
+  <h2 id="packs">Discord packs</h2>
+  <div class="card">
+    <ul>
+      <li><a href="packs/ALL-THREE-DISCORD-PASTE.md">ALL THREE paste</a></li>
+      <li><a href="packs/01-sandisk-FULL-PASTE.md">Sandisk</a></li>
+      <li><a href="packs/02-ai-regulation-FULL-PASTE.md">AI Regulation</a></li>
+      <li><a href="packs/03-silver-case-FULL-PASTE.md">Silver Case</a></li>
+      <li><a href="packs/INDEX.md">Index / attach order</a></li>
+    </ul>
+  </div>
+
+  <h2 id="report">Report</h2>
+  <div class="card">
+    <a class="btn" href="CLIP-Campaign-Report-2026-09-30.pdf">Download PDF</a>
+    <a class="btn btn2" href="CLIP-Campaign-Report-2026-09-30.html">Open HTML</a>
+  </div>
 </main>
 </body>
 </html>

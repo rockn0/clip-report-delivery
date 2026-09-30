@@ -1,0 +1,51 @@
+﻿Clipping Campaign Brief for AI Regulation 2
+Campaign Information
+1. Client Name: Current Works
+2. Campaign Display Name: AI Regulation Clipping
+3. Campaign Objective: Distribute memes, CEO clips and edits that make the case that AI needs more regulation now, turning the moment where the people building it asked for rules into content that is impossible to scroll past
+4. Clipper Budget: $6,000
+5. CPM: $1.00 per 1,000 views (6,000,000+ view goal)
+6. Country Demographics: Tier 1, US focus (English-speaking audiences)
+7. Platforms Eligible: TikTok - IG Reels - YT Shorts
+8. Campaign Launch Date: ASAP upon approval
+Campaign Requirements:
+* Clipper Guidelines + Requirements:
+   * Every clip must feature a video about AI AND an on screen headline that says AI needs more regulation. Clips missing either the video or the headline will be REJECTED
+   * The text on screen has to relate directly to AI needing more regulation. This is not a general meme campaign. A random meme, joke or trend with text that has nothing to do with regulating AI will be denied and not approved, no matter how well it performs
+   * Use the provided clip folder for selection and inspiration, or source your own clips as long as they fit the vibe of this brief. Viral posts, news clips, CEO interviews, stitched headlines and meme formats are all fair game
+   * Use a sample headline from the list below or write your own in the same voice, always tied back to AI needing rules
+   * Sample headlines:
+      * regulate AI before something goes seriously wrong
+      * if the people building AI are scared, the government needs to act
+      * Congress cannot wait for a disaster to set the rules
+      * this is too powerful to be left to voluntary promises
+      * we need enforceable AI safety laws NOW
+      * cool cool cool even the AI CEOs are nervous
+      * when the people building it say slow down
+      * if these guys agree on anything, maybe listen
+      * move fast and break everything?
+      * perhaps the superintelligence should have some rules
+      * love that we're inventing the brakes after the car
+   * Post at least one vertical video to TikTok, Instagram Reels or YouTube Shorts in 9:16 format
+   * No voting or election mentions, no telling people to vote for or against a candidate, no content from any political campaign or party. Stay on the issue, not on politics
+   * No malicious clickbait, nothing that creates bad PR for the client, no discriminatory or offensive material
+* Allowed add-ons (Y/N)
+   * Background noise - yes
+   * Background music - yes
+   * Reactions -
+      * Real - yes
+      * Fake - no
+   * Memes - yes, only if the meme format and its on screen text make the point that AI needs more regulation. Unrelated memes are denied
+   * Slide shows - yes
+   * Split screen - yes
+   * Sound Effects - yes
+   * Voiceover
+      * Normal - yes
+      * A.I. - no
+* Languages: English
+Key Information: (summary of campaign for context)
+The people racing hardest to build the most powerful AI systems all agree that AI needs regulation now, and that should tell us something. AI is advancing faster than the rules, the testing, and increasingly even the people building it seem comfortable with. This campaign asks a simple question: if even the AI CEOs are reaching for the brakes, why are guardrails still optional? Angles to lean into: CEO clips where the builders themselves call for rules, side by side cuts of rivals saying the same thing, "the brakes after the car" style memes, news clips on AI systems doing things their creators did not anticipate, and the gap between how fast the tech moves and how slow the rules are. Style is memes, CEO clips, reaction edits, green screen callouts, stitched headlines, "wait, WHAT?" compilations and brutally timed captions. Tone is wry, internet native and seriously alarmed. You know your audience best, so use your judgement on the format and pick the right clip for your page, but every post has to land on the same point: AI needs more regulation, and it needs it now.
+Clip Bank/Resources:
+* Content folder (50 videos, includes AP, NPR, Acyn, ControlAI, Future of Life Institute and CEO clips): https://drive.google.com/drive/folders/1HPCcttIsVRshU8u1sZkC_oLJ4onrYiRp 
+* Campaign folder (client brief and videos): https://drive.google.com/drive/folders/1jo4SkwzZzKyTPNHBVMaFHtYmh6yu5Tmb 
+* Client source brief: https://docs.google.com/document/d/1PcQRLKzl1UZJ9lrdNP5Y8kQn1w-0KLM3quEVXB5Q9FU/edit
