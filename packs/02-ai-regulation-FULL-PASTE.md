@@ -1,129 +1,91 @@
-# AI Regulation — Full Discord Paste Pack (Kai + Kinse Energy · Title Case)
-**DRAFT ONLY**
+# AI Regulation — Full Discord Paste Pack (Mirrored from last Mongo live brief)
 
-> Ready to paste. Sample headlines stay lowercase (on-screen voice). No voting / elections / candidates / parties.  
-> Wording: Title Case packing + Kinse thumbnail punch on hooks. Structure stays justin.edit.
+> Same structure as Ended campaign `j0tcgkte-o6yxdrumqw` (Sep 18), updated for new flight `j0tcgkte-u1xwlaacmpb` + Current Works brief. **Draft only — do not write Mongo / Discord until Justin pastes.**
 
----
-
-## ✅ DRAFT ASSETS + Existing Refs
-
-- [x] **EXISTING LOGO (quality bar):** `CLIP-AI-Regulation-LOGO.jpg` in `assets/`
-- [x] **EXISTING BANNER (quality bar):** `CLIP-AI-Regulation-BANNER.jpg` in `assets/`
-- [x] **DRAFT REFINED LOGO:** `/workspace/campaign-drafts/assets/generated/CLIP_-_AI_Regulation_Clipping_-_LOGO.png`
-- [x] **DRAFT REFINED BANNER:** `/workspace/campaign-drafts/assets/generated/CLIP_-_AI_Regulation_Clipping_-_BANNER.png`
-- [ ] Justin picks: keep existing CLIP Downloads pair, ship refined drafts, or blend.
-
-**Status: Existing assets READY; refined Kai/Kinse drafts also generated.**
+Guild: `1332196449366179891` · New clip-bank: `1554860676323745970` · campaign-details: `1554860662046330962` · updates: `1554860674436571218`
 
 ---
 
-## Attachments (💎・campaign-details)
-
-| Role | Filename | Status |
-|---|---|---|
-| Banner (existing) | `CLIP - AI Regulation Meme Clipping - BANNER.jpg` | **EXISTS** CLIP Downloads / box |
-| Logo (existing) | `CLIP - AI Regulation Meme Clipping - LOGO.jpg` | **EXISTS** CLIP Downloads / box |
-| Banner (draft refine) | `CLIP_-_AI_Regulation_Clipping_-_BANNER.png` | **DRAFT** `assets/generated/` |
-| Logo (draft refine) | `CLIP_-_AI_Regulation_Clipping_-_LOGO.png` | **DRAFT** `assets/generated/` |
-
-**Attach order:** Banner → logo (Justin chooses existing vs draft refine).
-
----
-
-## 1) Campaign Details — justin.edit Style (Kai-Energy Title Case)
+## 1) 💎・campaign-details → `campaignDetails`
 
 ```
-# AI Regulation - Clipping
-> **Payout**: **$1.00** per 1,000 Views / **$100** per 100,000 Views
+#  AI Regulation Clipping - Clipping
+> **Payout**: **$1.00** per 1,000 views / **$100** per 100,000 views
 > **Min. Engagement Rate**: **0.8%**
 > **Min. Views per Clip**: **2K** Total Views
 > **Min. Payout**: **5K** Total Views Across Clips
-> **Max. Payout**: **30%** of Budget (**$1,800**)
+> **Max. Payout**: **30%** of Budget (**1800**)
 > **Total Budget**: **$6,000** Up To **6M** Total Views
 > **Min. Post Duration**: 7 Seconds
-> **Platforms**: <:TikTok:1447665712700330247> TikTok, <:instagram:1451416785239937056> IG Reels **&** <:YTSHORTS:1447300052182896640> YT Shorts
-> <:demographicsglobe:1385058706986635324> **Country Tiers**: 1
-# <a:orange_alert:1308506967509176410> Content Requirements
+> **Platforms**:  TikTok,   IG Reels **&**  YT Shorts
+>  **Country Tiers**: 1
+#  Content Requirements
 - **Must Feature a Video About AI** ***__and__*** **an On-Screen Headline That Says AI Needs More Regulation** — Missing Either = **REJECTED**
-- **Must Use** Clips from the ***CLIP_BANK_CHANNEL*** **or** Source Your Own That Fit This Brief (CEO Interviews, News, Stitched Headlines, Meme Formats)
-- **On-Screen Text Must Tie Directly to Regulating AI** — Random Memes, Jokes, or Trends with Unrelated Text Are Denied
-- **SAMPLE HEADLINES:**
-     - *regulate AI before something goes seriously wrong*
-     - *if the people building AI are scared, the government needs to act*
-     - *Congress cannot wait for a disaster to set the rules*
-     - *this is too powerful to be left to voluntary promises*
-     - *we need enforceable AI safety laws NOW*
-     - *cool cool cool even the AI CEOs are nervous*
-     - *when the people building it say slow down*
-     - *if these guys agree on anything, maybe listen*
-     - *move fast and break everything?*
-     - *perhaps the superintelligence should have some rules*
-     - *love that we're inventing the brakes after the car*
-     - *wait — even the builders want brakes*
-     - *the wildest part is they all agree*
-<:warning:1410661906565562459> **DO NOT MENTION Voting, Elections, Candidates, or Parties — Stay on the Issue**
+- **Must be a clip** ***__or__*** ** edit from the provided content in the ** ***https://discord.com/channels/1332196449366179891/1554860676323745970***!** or source your own clips as** ***Viral posts, News clips, CEO interviews, stitched headlines and meme formats***
+- **Must mention** the **need for regulating AI*** in your **on-screen texts**
+- **On-Screen Text Must Tie Directly to Regulating AI** — A Random Meme, Joke, or Trend With Text That Has Nothing To Do With Regulating AI Will Be Denied, No Matter How Well It Performs
+- **SAMPLE  HEADLINES:**
+      -  regulate AI before something goes seriously wrong
+      -  if the people building AI are scared, the government needs to act
+      -  Congress cannot wait for a disaster to set the rules
+      -  this is too powerful to be left to voluntary promises
+      -  we need enforceable AI safety laws NOW
+      -  cool cool cool even the AI CEOs are nervous
+      -  when the people building it say slow down
+      -  if these guys agree on anything, maybe listen 
+      -  move fast and break everything?
+      -  perhaps the superintelligence should have some rules
+      -  love that we're inventing the brakes after the car
+- Keep the content wry, internet-native, sharp and easy to understand. The clip should feel native to the platform and built around a clear moment, quote, or idea.
+- **DO NOT MENTION voting or elections, and do not tell people to vote for or against any candidate.**
+- **DO NOT use clips or content created by any political campaign or party**
+- **NO malicious clickbait, NO discriminatory or offensive material**
 **ONLY 🇺🇸 English Language**
 ## Allowed Add-Ons
-<:check:1048023654925086791> **On-Screen Text** *(Required — Big Readable Type)*
-<:check:1048023654925086791> **Background Noise**
-<:check:1048023654925086791> **Background Music**
-<:check:1048023654925086791> **Real Reactions**
-<:check:1048023654925086791> **Memes** *(Only If Format + On-Screen Text Make the Regulation Point)*
-<:check:1048023654925086791> **Slideshows**
-<:check:1048023654925086791> **Split Screen**
-<:check:1048023654925086791> **Sound Effects**
-<:check:1048023654925086791> **Voice Overs** *(Real Voice Only)*
-<:DENY:1447765430969307219> **NO Fake Reactions**
-<:DENY:1447765430969307219> **NO AI Voice Overs**
-- **No Videos Portraying the Client in a Negative Light, Using Malicious Clickbait, or Creating Bad PR. If We Catch It — You'll Be Permanently Banned from All Clip Money Campaigns <a:alertdanger:1304881652878540935>**
-# <a:rf_alert:1304881657228296343> Reminder
-**Botting, Repeat Engagement Groups, Paid Ads, and Stealing Videos from Updates Are Strictly Forbidden.**
-When Our Systems/Software Catch Botting — You'll Be Banned in an Instant. If You're Caught Faking Views, You and All Connected Social Accounts Will Be Blacklisted from All Future Campaigns Permanently.
-If You Have Questions, Check <#1353489115534065798> or Open a Ticket in <#1386054910243639316>
+ **Background Noise**
+ **Background Music**
+ **Sound Effects**
+ **Real Reactions**
+ **Memes allowed** *(only if the meme format and its on-screen text make the point that AI needs more regulation — unrelated memes are denied)*
+ **Real Voiceovers**
+ **Slideshows**
+ **Split Screen** *(nothing unrelated to the campaign)*
+ **On-Screen Text** *(Required)*
+🚫  **NO Fake Reactions**
+🚫 **NO A.I. Voiceovers**
+- **No videos portraying misleading or malicious clickbait or the client/brand in a negative light, using malicious clickbait, or creating bad PR. If we catch it — you’ll be permanently banned from all Clip Money campaigns **
 ```
 
 ---
 
-## 2) Clip-Bank Message
+## 2) 📦・clip-bank → `contentBankDetails`
 
 ```
-# 📦 CONTENT — Even The Builders Want Brakes.
-
-## <:GoogleDrive:1531046502313496808> ***[AI Regulation Videos Folder](https://drive.google.com/drive/folders/1HPCcttIsVRshU8u1sZkC_oLJ4onrYiRp)***
-## <:GoogleDrive:1531046502313496808> ***[AI Regulation Campaign Folder](https://drive.google.com/drive/folders/1jo4SkwzZzKyTPNHBVMaFHtYmh6yu5Tmb)***
-
-You Can Also Source Your Own Clips (CEO Interviews, News, Stitched Headlines, Meme Formats) as Long as They Fit the Brief. The Wildest CEO Clip Hits Different — Just Land on Regulation.
-```
-
----
-
-## 3) Updates / Key Updates Message
-
-```
-# 🔑 KEY INFORMATION
-
-**Context**
-The People Racing Hardest to Build the Most Powerful AI Systems All Agree: **AI Needs Regulation Now.** That Should Tell Us Something. Tech Moves Fast. Rules Lag. Even the Builders Reach for the Brakes. This Campaign Asks One Clean Question: If the CEOs Want Guardrails, Why Are They Still Optional?
-
-**Angles to Lean Into:** CEO Clips Where Builders Call for Rules; Side-by-Side Rivals Saying the Same Thing; “Brakes After the Car” Memes; News Beats the Creators Did Not Anticipate; the Gap Between Speed and Law. Style = Memes, Reaction Edits, Green Screen Callouts, Stitched Headlines, “Wait, WHAT?” Compilations, Brutally Timed Captions. High-Contrast On-Screen Type. Tone Is Wry, Internet-Native, Seriously Alarmed.
-
-Every Post Lands the Same Point: **AI Needs More Regulation, and It Needs It Now.** On-Screen Headline + AI Video Are Both Required. No Voting, Elections, Candidates, or Party Content. 🤖⚖️
-```
-
----
-
-## 4) contentBankDetails
-
-```
-# 📦 CONTENT:
+# 📦 CONTENT
 ##  ***[AI Regulation Videos Folder](https://drive.google.com/drive/folders/1HPCcttIsVRshU8u1sZkC_oLJ4onrYiRp)***
 ##  ***[AI Regulation Campaign Folder](https://drive.google.com/drive/folders/1jo4SkwzZzKyTPNHBVMaFHtYmh6yu5Tmb)***
 ```
 
 ---
 
-## OPS Notes (Not for Discord)
+## 3) 🚨・updates (key information)
 
-- Client review / lockSubmissions setup (match Housing): finalReviewer client, realtime, lock on while client reviews.
-- Existing CLIP Downloads logo/banner READY; draft refined pair also in `assets/generated/` for Justin pick.
+```
+# 🔑 KEY INFORMATION
+
+**Context**
+The people racing hardest to build the most powerful AI systems all agree that **AI needs regulation now**, and that should tell us something. AI is advancing faster than the rules, the testing, and increasingly even the people building it seem comfortable with. This campaign asks a simple question: if even the AI CEOs are reaching for the brakes, why are guardrails still optional?
+
+**Angles to lean into:** CEO clips where the builders themselves call for rules; side-by-side cuts of rivals saying the same thing; “the brakes after the car” style memes; news clips on AI systems doing things their creators did not anticipate; the gap between how fast the tech moves and how slow the rules are. Style is memes, CEO clips, reaction edits, green screen callouts, stitched headlines, “wait, WHAT?” compilations and brutally timed captions. Tone is wry, internet-native and seriously alarmed.
+
+Every post has to land on the same point: **AI needs more regulation, and it needs it now.** On-screen headline + AI video are both required. No voting, elections, candidates, or party content.
+```
+
+---
+
+## OPS (not Discord)
+
+- Mongo last flight: `j0tcgkte-o6yxdrumqw` (Ended) · new shell: `j0tcgkte-u1xwlaacmpb` (Not Started)
+- Still set on new (match last): `minClipViews: 2000`, `minClipEngamentRate` 0.8% IG+TT
+- Logo/banner attaches on 💎・campaign-details
+- Draft only until Justin confirms paste / Mongo update
