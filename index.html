@@ -2,113 +2,206 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Clip Ops · Justin · Workflow</title>
-<style>
-:root{color-scheme:dark}
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#0b0b0f;color:#f4f4f5}
-nav{position:sticky;top:0;z-index:9;display:flex;gap:8px;flex-wrap:wrap;padding:10px 12px;background:#0b0b0fe6;border-bottom:1px solid #2a2a35;backdrop-filter:blur(8px)}
-nav a{color:#efe7ff;text-decoration:none;font-weight:700;font-size:.85rem;padding:8px 10px;border-radius:999px;background:#22222c;border:1px solid #3a3a48}
-main{max-width:900px;margin:0 auto;padding:16px 14px 48px}
-h1{font-size:1.45rem;margin:8px 0 4px}
-h2{font-size:1.1rem;margin:28px 0 10px;border-top:1px solid #2a2a35;padding-top:18px}
-p,.muted{color:#a1a1aa;line-height:1.4}
-.card{background:#16161d;border:1px solid #2a2a35;border-radius:16px;padding:14px;margin:10px 0}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-img{width:100%;border-radius:12px;display:block;background:#222}
-.btn{display:inline-block;margin:4px 6px 4px 0;padding:12px 14px;border-radius:12px;font-weight:700;text-decoration:none;background:#efe7ff;color:#1a1028}
-.btn2{background:#22222c;color:#f4f4f5;border:1px solid #3a3a48}
-ul{padding-left:18px}
-li{margin:6px 0}
-@media(max-width:520px){.grid{grid-template-columns:1fr}}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="description" content="Clip Ops hub for Justin — today launches, assets, briefs, Discord packs, and campaign report."/>
+<meta name="theme-color" content="#09090b"/>
+<title>Clip Ops · Justin · Campaign Hub</title>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23121118'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='16' font-family='system-ui,sans-serif' font-weight='800' fill='%23a78bfa'%3EC%3C/text%3E%3C/svg%3E"/>
 </head>
 <body>
-<nav>
+<a class="skip" href="#today">Skip to today’s launches</a>
+
+<nav class="topnav" aria-label="Primary">
   <a href="#today">Today</a>
   <a href="#assets">Assets</a>
   <a href="#briefs">Briefs</a>
   <a href="#packs">Packs</a>
   <a href="#report">Report</a>
 </nav>
+
 <main>
-  <h1>Clip Ops · Justin</h1>
-  <p class="muted">Sep 30, 2026 · ship-now hub (iPhone + PC). Draft only — you run Discord /campaign setup.</p>
+  <header class="hero">
+    <div class="tag">Clip Money · Ops</div>
+    <h1>Clip Ops · Justin</h1>
+    <p class="lead">Sep 30, 2026 · mobile-first campaign hub for today’s launches. Ship assets → paste packs → Discord <code>/campaign</code> setup (you run that step).</p>
+  </header>
 
-  <h2 id="today">Today’s launches</h2>
-
-  <div class="card">
-    <h3>1 · Sandisk Stream</h3>
-    <p class="muted">Attach logo + banner to campaign-details. Spell <b>Sandisk</b>. OP is a person.</p>
-    <div class="grid">
-      <a href="assets/today/CLIP-Sandisk-LOGO.png"><img src="assets/today/CLIP-Sandisk-LOGO.png" alt="Sandisk logo"/><span class="muted">Logo PNG</span></a>
-      <a href="assets/today/CLIP-Sandisk-BANNER.png"><img src="assets/today/CLIP-Sandisk-BANNER.png" alt="Sandisk banner"/><span class="muted">Banner PNG</span></a>
+  <section class="section" id="today" aria-labelledby="today-h">
+    <div class="section-head">
+      <h2 id="today-h">Today’s launches</h2>
     </div>
-    <p>
-      <a class="btn" href="packs/01-sandisk-FULL-PASTE.md">Discord pack</a>
-      <a class="btn btn2" href="briefs/1AKw2SXxzsU-tMZOZFsFw7HSjUfkL1JJvBIFc_g-XCds.txt">Brief</a>
-    </p>
-  </div>
+    <p class="section-note">Three campaigns ready for Discord. Attach order on every card: <strong>banner → logo → details → clip-bank → updates</strong>.</p>
 
-  <div class="card">
-    <h3>2 · AI Regulation</h3>
-    <div class="grid">
-      <a href="assets/today/CLIP-AI-Regulation-v2-LOGO.png"><img src="assets/today/CLIP-AI-Regulation-v2-LOGO.png" alt="AI Reg logo"/></a>
-      <a href="assets/today/CLIP-AI-Regulation-v2-BANNER.png"><img src="assets/today/CLIP-AI-Regulation-v2-BANNER.png" alt="AI Reg banner"/></a>
+    <!-- 1 Sandisk -->
+    <article class="card">
+      <h3>1 · Sandisk Stream</h3>
+      <p class="card-meta">Spell <strong>Sandisk</strong> (lowercase d). <strong>OP</strong> is a person — never AI / robot.</p>
+      <div class="thumbs">
+        <a class="thumb" href="assets/today/CLIP-Sandisk-LOGO.png">
+          <img src="assets/today/CLIP-Sandisk-LOGO.png" alt="Sandisk Stream logo" width="400" height="400" loading="lazy"/>
+          <span class="thumb-label">Logo PNG</span>
+        </a>
+        <a class="thumb banner" href="assets/today/CLIP-Sandisk-BANNER.png">
+          <img src="assets/today/CLIP-Sandisk-BANNER.png" alt="Sandisk Stream banner" width="800" height="450" loading="lazy"/>
+          <span class="thumb-label">Banner PNG</span>
+        </a>
+      </div>
+      <div class="attach-order">
+        <strong>Attach order</strong> (campaign-details)
+        <ol>
+          <li>Banner</li>
+          <li>Logo</li>
+          <li>Details paste</li>
+          <li>Clip-bank</li>
+          <li>Updates</li>
+        </ol>
+      </div>
+      <div class="actions">
+        <a class="btn" href="packs/01-sandisk-FULL-PASTE.md">Discord pack</a>
+        <a class="btn btn-ghost" href="briefs/1AKw2SXxzsU-tMZOZFsFw7HSjUfkL1JJvBIFc_g-XCds.txt">Brief</a>
+      </div>
+    </article>
+
+    <!-- 2 AI Regulation -->
+    <article class="card">
+      <h3>2 · AI Regulation</h3>
+      <p class="card-meta">Sample headlines stay lowercase. No voting / elections / candidates / parties.</p>
+      <div class="thumbs">
+        <a class="thumb" href="assets/today/CLIP-AI-Regulation-v2-LOGO.png">
+          <img src="assets/today/CLIP-AI-Regulation-v2-LOGO.png" alt="AI Regulation logo" width="400" height="400" loading="lazy"/>
+          <span class="thumb-label">Logo PNG</span>
+        </a>
+        <a class="thumb banner" href="assets/today/CLIP-AI-Regulation-v2-BANNER.png">
+          <img src="assets/today/CLIP-AI-Regulation-v2-BANNER.png" alt="AI Regulation banner" width="800" height="450" loading="lazy"/>
+          <span class="thumb-label">Banner PNG</span>
+        </a>
+      </div>
+      <div class="attach-order">
+        <strong>Attach order</strong> (campaign-details)
+        <ol>
+          <li>Banner</li>
+          <li>Logo</li>
+          <li>Details paste</li>
+          <li>Clip-bank</li>
+          <li>Updates</li>
+        </ol>
+      </div>
+      <div class="actions">
+        <a class="btn" href="packs/02-ai-regulation-FULL-PASTE.md">Discord pack</a>
+        <a class="btn btn-ghost" href="briefs/13rQhyphA-4mFIEFhasUgV13XldEQyGdNroWdeu5w_Yo.txt">Brief</a>
+      </div>
+    </article>
+
+    <!-- 3 Silver Case -->
+    <article class="card">
+      <h3>3 · The Man With the Silver Case</h3>
+      <p class="card-meta">Film + $25K LA manhunt angle. Full-film access stays out-of-band — not on this hub.</p>
+      <div class="thumbs">
+        <a class="thumb" href="assets/today/CLIP-Silver-Case-LOGO.png">
+          <img src="assets/today/CLIP-Silver-Case-LOGO.png" alt="The Man With the Silver Case logo" width="400" height="400" loading="lazy"/>
+          <span class="thumb-label">Logo PNG</span>
+        </a>
+        <a class="thumb banner" href="assets/today/CLIP-Silver-Case-BANNER.png">
+          <img src="assets/today/CLIP-Silver-Case-BANNER.png" alt="The Man With the Silver Case banner" width="800" height="450" loading="lazy"/>
+          <span class="thumb-label">Banner PNG</span>
+        </a>
+      </div>
+      <div class="attach-order">
+        <strong>Attach order</strong> (campaign-details)
+        <ol>
+          <li>Banner</li>
+          <li>Logo</li>
+          <li>Details paste</li>
+          <li>Clip-bank</li>
+          <li>Updates</li>
+        </ol>
+      </div>
+      <div class="actions">
+        <a class="btn" href="packs/03-silver-case-FULL-PASTE.md">Discord pack</a>
+        <a class="btn btn-ghost" href="briefs/1Fx4_wKTOHVaKcuurJ_MZ0tNqHb9kMmct_Zp8uSwBAVg.txt">Brief</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="section" id="assets" aria-labelledby="assets-h">
+    <div class="section-head">
+      <h2 id="assets-h">Assets</h2>
     </div>
-    <p>
-      <a class="btn" href="packs/02-ai-regulation-FULL-PASTE.md">Discord pack</a>
-      <a class="btn btn2" href="briefs/13rQhyphA-4mFIEFhasUgV13XldEQyGdNroWdeu5w_Yo.txt">Brief</a>
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>3 · The Man With the Silver Case</h3>
-    <div class="grid">
-      <a href="assets/today/CLIP-Silver-Case-LOGO.png"><img src="assets/today/CLIP-Silver-Case-LOGO.png" alt="Silver Case logo"/></a>
-      <a href="assets/today/CLIP-Silver-Case-BANNER.png"><img src="assets/today/CLIP-Silver-Case-BANNER.png" alt="Silver Case banner"/></a>
+    <p class="section-note">PNG drafts for Discord + JPG copies under <code>assets/today/</code>.</p>
+    <div class="asset-grid">
+      <div class="asset-block">
+        <h3>Sandisk Stream</h3>
+        <div class="asset-links">
+          <a class="chip" href="assets/today/CLIP-Sandisk-LOGO.png">Logo PNG</a>
+          <a class="chip" href="assets/today/CLIP-Sandisk-BANNER.png">Banner PNG</a>
+          <a class="chip" href="assets/today/01-sandisk-logo.jpg">Logo JPG</a>
+          <a class="chip" href="assets/today/01-sandisk-banner.jpg">Banner JPG</a>
+        </div>
+      </div>
+      <div class="asset-block">
+        <h3>AI Regulation</h3>
+        <div class="asset-links">
+          <a class="chip" href="assets/today/CLIP-AI-Regulation-v2-LOGO.png">Logo PNG</a>
+          <a class="chip" href="assets/today/CLIP-AI-Regulation-v2-BANNER.png">Banner PNG</a>
+          <a class="chip" href="assets/today/02-aireg-logo.jpg">Logo JPG</a>
+          <a class="chip" href="assets/today/02-aireg-banner.jpg">Banner JPG</a>
+        </div>
+      </div>
+      <div class="asset-block">
+        <h3>Silver Case</h3>
+        <div class="asset-links">
+          <a class="chip" href="assets/today/CLIP-Silver-Case-LOGO.png">Logo PNG</a>
+          <a class="chip" href="assets/today/CLIP-Silver-Case-BANNER.png">Banner PNG</a>
+          <a class="chip" href="assets/today/03-silver-logo.jpg">Logo JPG</a>
+          <a class="chip" href="assets/today/03-silver-banner.jpg">Banner JPG</a>
+        </div>
+      </div>
     </div>
-    <p>
-      <a class="btn" href="packs/03-silver-case-FULL-PASTE.md">Discord pack</a>
-      <a class="btn btn2" href="briefs/1Fx4_wKTOHVaKcuurJ_MZ0tNqHb9kMmct_Zp8uSwBAVg.txt">Brief</a>
-    </p>
-  </div>
+  </section>
 
-  <h2 id="assets">Assets</h2>
-  <div class="card">
-    <ul>
-      <li><a href="assets/today/CLIP-Sandisk-LOGO.png">Sandisk logo PNG</a> · <a href="assets/today/CLIP-Sandisk-BANNER.png">banner PNG</a> · <a href="assets/today/01-sandisk-logo.jpg">jpg logo</a> · <a href="assets/today/01-sandisk-banner.jpg">jpg banner</a></li>
-      <li><a href="assets/today/CLIP-AI-Regulation-v2-LOGO.png">AI Reg logo PNG</a> · <a href="assets/today/CLIP-AI-Regulation-v2-BANNER.png">banner PNG</a></li>
-      <li><a href="assets/today/CLIP-Silver-Case-LOGO.png">Silver Case logo PNG</a> · <a href="assets/today/CLIP-Silver-Case-BANNER.png">banner PNG</a></li>
-    </ul>
-  </div>
+  <section class="section" id="briefs" aria-labelledby="briefs-h">
+    <div class="section-head">
+      <h2 id="briefs-h">Briefs</h2>
+    </div>
+    <div class="list-card">
+      <a href="briefs/1AKw2SXxzsU-tMZOZFsFw7HSjUfkL1JJvBIFc_g-XCds.txt">Sandisk Combined Creators <span class="hint">.txt</span></a>
+      <a href="briefs/13rQhyphA-4mFIEFhasUgV13XldEQyGdNroWdeu5w_Yo.txt">AI Regulation 2 <span class="hint">.txt</span></a>
+      <a href="briefs/1Fx4_wKTOHVaKcuurJ_MZ0tNqHb9kMmct_Zp8uSwBAVg.txt">The Man With the Silver Case <span class="hint">.txt</span></a>
+    </div>
+  </section>
 
-  <h2 id="briefs">Briefs</h2>
-  <div class="card">
-    <ul>
-      <li><a href="briefs/1AKw2SXxzsU-tMZOZFsFw7HSjUfkL1JJvBIFc_g-XCds.txt">Sandisk Combined Creators</a></li>
-      <li><a href="briefs/13rQhyphA-4mFIEFhasUgV13XldEQyGdNroWdeu5w_Yo.txt">AI Regulation 2</a></li>
-      <li><a href="briefs/1Fx4_wKTOHVaKcuurJ_MZ0tNqHb9kMmct_Zp8uSwBAVg.txt">The Man With the Silver Case</a></li>
-    </ul>
-  </div>
+  <section class="section" id="packs" aria-labelledby="packs-h">
+    <div class="section-head">
+      <h2 id="packs-h">Discord packs</h2>
+    </div>
+    <div class="list-card">
+      <a href="packs/ALL-THREE-DISCORD-PASTE.md">ALL THREE paste <span class="hint">combined</span></a>
+      <a href="packs/01-sandisk-FULL-PASTE.md">Sandisk Stream <span class="hint">.md</span></a>
+      <a href="packs/02-ai-regulation-FULL-PASTE.md">AI Regulation <span class="hint">.md</span></a>
+      <a href="packs/03-silver-case-FULL-PASTE.md">Silver Case <span class="hint">.md</span></a>
+      <a href="packs/INDEX.md">Pack index / attach order <span class="hint">index</span></a>
+      <a href="packs/STYLE-NOTES.md">Style notes (Kai + Kinse) <span class="hint">ref</span></a>
+    </div>
+  </section>
 
-  <h2 id="packs">Discord packs</h2>
-  <div class="card">
-    <ul>
-      <li><a href="packs/ALL-THREE-DISCORD-PASTE.md">ALL THREE paste</a></li>
-      <li><a href="packs/01-sandisk-FULL-PASTE.md">Sandisk</a></li>
-      <li><a href="packs/02-ai-regulation-FULL-PASTE.md">AI Regulation</a></li>
-      <li><a href="packs/03-silver-case-FULL-PASTE.md">Silver Case</a></li>
-      <li><a href="packs/INDEX.md">Index / attach order</a></li>
-    </ul>
-  </div>
-
-  <h2 id="report">Report</h2>
-  <div class="card">
-    <a class="btn" href="CLIP-Campaign-Report-2026-09-30.pdf">Download PDF</a>
-    <a class="btn btn2" href="CLIP-Campaign-Report-2026-09-30.html">Open HTML</a>
-  </div>
+  <section class="section" id="report" aria-labelledby="report-h">
+    <div class="section-head">
+      <h2 id="report-h">Report</h2>
+    </div>
+    <div class="card">
+      <p class="card-meta" style="margin-bottom:12px">CLIP Campaign Report — Sep 30, 2026</p>
+      <div class="actions">
+        <a class="btn" href="CLIP-Campaign-Report-2026-09-30.pdf">Download PDF</a>
+        <a class="btn btn-ghost" href="CLIP-Campaign-Report-2026-09-30.html">Open HTML</a>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer class="footer">
+  <p><strong>Draft only</strong> — Justin runs Discord <code>/campaign</code> setup.</p>
+  <p class="muted-2">Clip Money · clip.tech campaign ops · rockn0.github.io/clip-report-delivery</p>
+</footer>
 </body>
 </html>
