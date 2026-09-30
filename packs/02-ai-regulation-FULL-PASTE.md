@@ -68,15 +68,22 @@
 
 ---
 
-## 3) 🚨・updates
+## 3) 🚨・updates (starts / KEY INFORMATION)
+
+Already live on new flight updates channel `1554860674436571218`:
 
 ```
 # 🔑 KEY INFORMATION
 
-**Context**
-The people racing hardest to build the most powerful AI systems all agree that **AI needs regulation now**, and that should tell us something. AI is advancing faster than the rules, the testing, and increasingly even the people building it seem comfortable with. This campaign asks a simple question: if even the AI CEOs are reaching for the brakes, why are guardrails still optional?
+**Context** (summary of campaign for context)
+The people racing hardest to build the most powerful **AI** systems all agree that **AI** needs regulation now, and that should tell us something. **AI** is advancing faster than the rules, the testing, and increasingly even the people building it seem comfortable with. This campaign asks a simple question: if even the **AI CEOs** are reaching for the brakes, why are guardrails still optional? 
 
-**Angles to lean into:** CEO clips where the builders themselves call for rules; side-by-side cuts of rivals saying the same thing; “the brakes after the car” style memes; news clips on AI systems doing things their creators did not anticipate; the gap between how fast the tech moves and how slow the rules are. Style is memes, CEO clips, reaction edits, green screen callouts, stitched headlines, “wait, WHAT?” compilations and brutally timed captions. Tone is wry, internet-native and seriously alarmed.
+**Angles to lean into:** CEO clips where the builders themselves call for rules, side by side cuts of rivals saying the same thing, "the brakes after the car" style memes, news clips on **AI** systems doing things their creators did not anticipate, and the gap between how fast the tech moves and how slow the rules are. Style is memes, CEO clips, reaction edits, green screen callouts, stitched headlines, "wait, WHAT?" compilations and brutally timed captions. Tone is wry, internet native and seriously alarmed. You know your audience best, so use your judgement on the format and pick the right clip for your page, but every post has to land on the same point: **AI** needs more regulation, and it needs it now. 🤖🛡️
+```
 
-Every post has to land on the same point: **AI needs more regulation, and it needs it now.** On-screen headline + AI video are both required. No voting, elections, candidates, or party content.
+Older Sep 18 starts (for reference):
+
+```
+# 🔑 Key Information: (summary for context)
+This weekend the people racing hardest to build the most powerful AI systems did something strange: they basically agreed that AI needs regulation now. That should tell us something. AI is advancing faster than the rules, the testing, and increasingly even the people building it seem comfortable with. This campaign turns that sudden outbreak of industry anxiety into the obvious question: if even the AI CEOs are reaching for the brakes, why are guardrails still optional? Angles to lean into: CEO clips where the builders themselves call for rules, side by side cuts of rivals saying the same thing, "the brakes after the car" style memes, news clips on AI systems behaving in ways their creators did not expect, and the gap between how fast the tech moves and how slow the rules are. Clips should feel wry and sharp, the kind of thing people send to a friend with "this is actually insane."
 ```
