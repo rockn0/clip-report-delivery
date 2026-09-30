@@ -1,12 +1,12 @@
-# AI Regulation — Full Discord Paste Pack (Mirrored from last Mongo live brief)
+# AI Regulation — Discord Paste (from older Mongo live brief)
 
-> Same structure as Ended campaign `j0tcgkte-o6yxdrumqw` (Sep 18), updated for new flight `j0tcgkte-u1xwlaacmpb` + Current Works brief. **Draft only — do not write Mongo / Discord until Justin pastes.**
-
-Guild: `1332196449366179891` · New clip-bank: `1554860676323745970` · campaign-details: `1554860662046330962` · updates: `1554860674436571218`
+> Based on Ended Sep 18 flight `j0tcgkte-o6yxdrumqw` (only older AI Reg with saved `campaignDetails`). July meme flight `j0tcgkte-6hnpw3yte0s` has empty details in Mongo. New shell: `j0tcgkte-u1xwlaacmpb`.
+> Updated: new clip-bank link, dual reject rule (AI video + regulation headline), Housing-style “no unrelated memes” line, `:check~4:` / `:DENY:` add-ons, both Drive folders.
+> **Draft only — not written to Mongo/Discord.**
 
 ---
 
-## 1) 💎・campaign-details → `campaignDetails`
+## 1) 💎・campaign-details
 
 ```
 #  AI Regulation Clipping - Clipping
@@ -23,7 +23,7 @@ Guild: `1332196449366179891` · New clip-bank: `1554860676323745970` · campaign
 - **Must Feature a Video About AI** ***__and__*** **an On-Screen Headline That Says AI Needs More Regulation** — Missing Either = **REJECTED**
 - **Must be a clip** ***__or__*** ** edit from the provided content in the ** ***https://discord.com/channels/1332196449366179891/1554860676323745970***!** or source your own clips as** ***Viral posts, News clips, CEO interviews, stitched headlines and meme formats***
 - **Must mention** the **need for regulating AI*** in your **on-screen texts**
-- **On-Screen Text Must Tie Directly to Regulating AI** — A Random Meme, Joke, or Trend With Text That Has Nothing To Do With Regulating AI Will Be Denied, No Matter How Well It Performs
+- **Must clearly reference AI needing regulation.** **NO general memes, jokes, or trends** that do not directly relate to regulating AI are allowed.
 - **SAMPLE  HEADLINES:**
       -  regulate AI before something goes seriously wrong
       -  if the people building AI are scared, the government needs to act
@@ -46,7 +46,7 @@ Guild: `1332196449366179891` · New clip-bank: `1554860676323745970` · campaign
 :check~4: **Background Music**
 :check~4: **Sound Effects**
 :check~4: **Real Reactions**
-:check~4: **Memes allowed** *(only if the meme format and its on-screen text make the point that AI needs more regulation — unrelated memes are denied)*
+:check~4: **Memes allowed** *(only when tied to regulating AI)*
 :check~4: **Real Voiceovers**
 :check~4: **Slideshows**
 :check~4: **Split Screen** *(nothing unrelated to the campaign)*
@@ -58,7 +58,7 @@ Guild: `1332196449366179891` · New clip-bank: `1554860676323745970` · campaign
 
 ---
 
-## 2) 📦・clip-bank → `contentBankDetails`
+## 2) 📦・clip-bank
 
 ```
 # 📦 CONTENT
@@ -68,7 +68,7 @@ Guild: `1332196449366179891` · New clip-bank: `1554860676323745970` · campaign
 
 ---
 
-## 3) 🚨・updates (key information)
+## 3) 🚨・updates
 
 ```
 # 🔑 KEY INFORMATION
@@ -80,12 +80,3 @@ The people racing hardest to build the most powerful AI systems all agree that *
 
 Every post has to land on the same point: **AI needs more regulation, and it needs it now.** On-screen headline + AI video are both required. No voting, elections, candidates, or party content.
 ```
-
----
-
-## OPS (not Discord)
-
-- Mongo last flight: `j0tcgkte-o6yxdrumqw` (Ended) · new shell: `j0tcgkte-u1xwlaacmpb` (Not Started)
-- Still set on new (match last): `minClipViews: 2000`, `minClipEngamentRate` 0.8% IG+TT
-- Logo/banner attaches on 💎・campaign-details
-- Draft only until Justin confirms paste / Mongo update
