@@ -42,17 +42,17 @@ Guild: `1332196449366179891` · New clip-bank: `1554860676323745970` · campaign
 - **NO malicious clickbait, NO discriminatory or offensive material**
 **ONLY 🇺🇸 English Language**
 ## Allowed Add-Ons
- **Background Noise**
- **Background Music**
- **Sound Effects**
- **Real Reactions**
- **Memes allowed** *(only if the meme format and its on-screen text make the point that AI needs more regulation — unrelated memes are denied)*
- **Real Voiceovers**
- **Slideshows**
- **Split Screen** *(nothing unrelated to the campaign)*
- **On-Screen Text** *(Required)*
-🚫  **NO Fake Reactions**
-🚫 **NO A.I. Voiceovers**
+:check~4: **Background Noise**
+:check~4: **Background Music**
+:check~4: **Sound Effects**
+:check~4: **Real Reactions**
+:check~4: **Memes allowed** *(only if the meme format and its on-screen text make the point that AI needs more regulation — unrelated memes are denied)*
+:check~4: **Real Voiceovers**
+:check~4: **Slideshows**
+:check~4: **Split Screen** *(nothing unrelated to the campaign)*
+:check~4: **On-Screen Text** *(Required)*
+:DENY: **NO Fake Reactions**
+:DENY: **NO A.I. Voiceovers**
 - **No videos portraying misleading or malicious clickbait or the client/brand in a negative light, using malicious clickbait, or creating bad PR. If we catch it — you’ll be permanently banned from all Clip Money campaigns **
 ```
 
