@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#09090b"/>
+<title>CLIP Campaign Art Options · Justin</title>
+<style>
+:root{--bg:#09090b;--card:#121118;--text:#f4f4f5;--muted:#a1a1aa;--accent:#ec4899;--line:#27272a}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.4}
+a{color:#f9a8d4;text-decoration:none}a:hover{text-decoration:underline}
+header{padding:1.25rem 1rem;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(9,9,11,.92);backdrop-filter:blur(8px);z-index:2}
+header h1{margin:0;font-size:1.25rem}header p{margin:.35rem 0 0;color:var(--muted);font-size:.9rem}
+nav{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:.75rem}
+nav a{padding:.35rem .7rem;border:1px solid var(--line);border-radius:999px;color:var(--text);background:#18181b}
+nav a.active{border-color:var(--accent);color:#fff;background:#3b0a24}
+main{padding:1rem;max-width:1100px;margin:0 auto}
+section{margin:1.5rem 0 2.5rem}
+h2{margin:0 0 .35rem;font-size:1.1rem} .meta{color:var(--muted);font-size:.85rem;margin-bottom:1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.75rem}
+.grid.banners{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.card img{display:block;width:100%;height:auto;background:#000}
+.card .cap{padding:.5rem .65rem;font-size:.78rem;color:var(--muted);display:flex;justify-content:space-between;gap:.5rem}
+.pill{display:inline-block;padding:.15rem .45rem;border-radius:999px;background:#3b0a24;color:#f9a8d4;font-size:.7rem;font-weight:700}
+footer{padding:1.5rem 1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <h1>CLIP Campaign Art Options</h1>
+  <p>Pick a logo + banner per campaign. Logos also ship as Discord 128×128.</p>
+  <nav>
+    <a class="active" href="#aireg">AI Regulation</a>
+    <a href="#sandisk">Sandisk Stream</a>
+    <a href="#silver">Silver Case</a>
+    <a href="index.html">Ops hub</a>
+  </nav>
+</header>
+<main>
+
+<section id="aireg">
+  <h2>AI Regulation <span class="pill">PRIORITY</span></h2>
+  <p class="meta">Magenta/neon · regulate AI punch · no voting/elections/parties · slug <code>aireg</code></p>
+  <h3 style="font-size:.95rem;color:var(--muted);font-weight:600">Logos (1:1)</h3>
+  <div class="grid" id="aireg-logos"></div>
+  <h3 style="font-size:.95rem;color:var(--muted);font-weight:600;margin-top:1.25rem">Banners (16:9)</h3>
+  <div class="grid banners" id="aireg-banners"></div>
+</section>
+
+<section id="sandisk">
+  <h2>Sandisk Stream</h2>
+  <p class="meta">Spell <strong>Sandisk</strong> (lowercase d) · OP is a person · purple/neon · slug <code>sandisk</code></p>
+  <h3 style="font-size:.95rem;color:var(--muted);font-weight:600">Logos (1:1)</h3>
+  <div class="grid" id="sandisk-logos"></div>
+  <h3 style="font-size:.95rem;color:var(--muted);font-weight:600;margin-top:1.25rem">Banners (16:9)</h3>
+  <div class="grid banners" id="sandisk-banners"></div>
+</section>
+
+<section id="silver">
+  <h2>The Man With the Silver Case</h2>
+  <p class="meta">Thriller/noir manhunt · silver case prop · not newspaper collage · slug <code>silver</code></p>
+  <h3 style="font-size:.95rem;color:var(--muted);font-weight:600">Logos (1:1)</h3>
+  <div class="grid" id="silver-logos"></div>
+  <h3 style="font-size:.95rem;color:var(--muted);font-weight:600;margin-top:1.25rem">Banners (16:9)</h3>
+  <div class="grid banners" id="silver-banners"></div>
+</section>
+
+</main>
+<footer>Clip Ops · Justin · options gallery · assets under <code>assets/options/{slug}/</code></footer>
+<script>
+function card(href, label, sub){
+  const a=document.createElement('a'); a.className='card'; a.href=href;
+  a.innerHTML=`<img src="${href}" alt="${label}" loading="lazy"/><div class="cap"><span>${label}</span><span>${sub||''}</span></div>`;
+  return a;
+}
+function fill(slug){
+  const L=document.getElementById(slug+'-logos');
+  const B=document.getElementById(slug+'-banners');
+  for(let i=1;i<=5;i++){
+    const n=String(i).padStart(2,'0');
+    L.appendChild(card(`assets/options/${slug}/${slug}-logo-${n}.png`, `Logo ${i}`, '1:1'));
+    L.appendChild(card(`assets/options/${slug}/${slug}-logo-${n}-128.png`, `Logo ${i} · 128`, 'Discord'));
+    B.appendChild(card(`assets/options/${slug}/${slug}-banner-${n}.png`, `Banner ${i}`, '16:9'));
+  }
+}
+['aireg','sandisk','silver'].forEach(fill);
+</script>
+</body>
+</html>
