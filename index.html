@@ -6,23 +6,64 @@
 <title>CLIP Campaign Report · Sep 30, 2026</title>
 <style>
   :root { color-scheme: dark; }
-  body { margin:0; font-family: system-ui, -apple-system, Segoe UI, sans-serif; background:#0b0b0f; color:#f4f4f5; min-height:100dvh; display:flex; align-items:center; justify-content:center; padding:24px; }
-  .card { width:min(440px,100%); background:#16161d; border:1px solid #2a2a35; border-radius:20px; padding:28px 24px; box-shadow:0 20px 60px rgba(0,0,0,.45); }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:#0b0b0f; color:#f4f4f5; min-height:100dvh; padding:24px 16px 40px; }
+  main { width:min(760px,100%); margin:0 auto; }
+  .intro { background:#16161d; border:1px solid #2a2a35; border-radius:20px; padding:24px 20px; margin-bottom:16px; box-shadow:0 20px 60px rgba(0,0,0,.28); }
   h1 { font-size:1.35rem; margin:0 0 6px; letter-spacing:-.02em; }
-  p { margin:0 0 20px; color:#a1a1aa; font-size:.95rem; line-height:1.45; }
-  .btn { display:block; text-align:center; text-decoration:none; padding:16px 18px; border-radius:14px; font-weight:700; font-size:1.05rem; margin-bottom:12px; }
+  h2 { font-size:1.05rem; margin:0 0 14px; }
+  p { margin:0 0 16px; color:#a1a1aa; font-size:.95rem; line-height:1.45; }
+  .gallery { display:grid; gap:16px; }
+  .card { background:#16161d; border:1px solid #2a2a35; border-radius:20px; padding:16px; overflow:hidden; }
+  .art-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .art { display:block; color:#f4f4f5; text-decoration:none; }
+  .art img { display:block; width:100%; height:clamp(120px,28vw,220px); object-fit:cover; border-radius:12px; background:#22222c; }
+  .art span { display:block; margin-top:7px; color:#a1a1aa; font-size:.8rem; }
+  .actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+  .btn { flex:1 1 150px; display:block; text-align:center; text-decoration:none; padding:13px 14px; border-radius:12px; font-weight:700; font-size:.92rem; }
   .primary { background:#efe7ff; color:#1a1028; }
   .secondary { background:#22222c; color:#f4f4f5; border:1px solid #3a3a48; }
-  .note { font-size:.8rem; color:#71717a; margin-top:8px; }
+  .note { font-size:.8rem; color:#71717a; margin:16px 0 0; }
+  @media (max-width:480px) { body { padding:14px 12px 28px; } .intro,.card { border-radius:16px; } .intro { padding:20px 16px; } .card { padding:12px; } .art-grid { gap:8px; } }
 </style>
 </head>
 <body>
-  <div class="card">
+<main>
+  <section class="intro">
     <h1>CLIP · Campaign Report</h1>
-    <p>September 30, 2026 draft — works on iPhone and Windows. Draft only; not posted to Slack.</p>
-    <a class="btn primary" href="./CLIP-Campaign-Report-2026-09-30.pdf" download>Download PDF</a>
-    <a class="btn secondary" href="./CLIP-Campaign-Report-2026-09-30.html">Open HTML report</a>
-    <p class="note">Tip: on iPhone, open PDF → Share → Save to Files. On PC it’s also in Downloads.</p>
-  </div>
+    <p>September 30, 2026 draft — Kai/Kinse v2 show art and campaign report, ready to open on iPhone or Windows.</p>
+    <a class="btn primary" href="./CLIP-Campaign-Report-2026-09-30.pdf" download>Download report PDF</a>
+    <p class="note">Tap any image to open the full-size JPG. On iPhone, use Share → Save to Files.</p>
+  </section>
+
+  <section class="gallery" aria-label="Kai/Kinse v2 show art">
+    <article class="card">
+      <h2>01 · Sandisk</h2>
+      <div class="art-grid">
+        <a class="art" href="./01-sandisk-logo.jpg"><img src="./01-sandisk-logo.jpg" alt="Sandisk logo" loading="lazy"><span>Open logo JPG</span></a>
+        <a class="art" href="./01-sandisk-banner.jpg"><img src="./01-sandisk-banner.jpg" alt="Sandisk banner" loading="lazy"><span>Open banner JPG</span></a>
+      </div>
+      <div class="actions"><a class="btn secondary" href="./CLIP-Campaign-Report-2026-09-30.pdf">Open report PDF</a></div>
+    </article>
+
+    <article class="card">
+      <h2>02 · AIReg</h2>
+      <div class="art-grid">
+        <a class="art" href="./02-aireg-logo.jpg"><img src="./02-aireg-logo.jpg" alt="AIReg logo" loading="lazy"><span>Open logo JPG</span></a>
+        <a class="art" href="./02-aireg-banner.jpg"><img src="./02-aireg-banner.jpg" alt="AIReg banner" loading="lazy"><span>Open banner JPG</span></a>
+      </div>
+      <div class="actions"><a class="btn secondary" href="./CLIP-Campaign-Report-2026-09-30.pdf">Open report PDF</a></div>
+    </article>
+
+    <article class="card">
+      <h2>03 · Silver</h2>
+      <div class="art-grid">
+        <a class="art" href="./03-silver-logo.jpg"><img src="./03-silver-logo.jpg" alt="Silver logo" loading="lazy"><span>Open logo JPG</span></a>
+        <a class="art" href="./03-silver-banner.jpg"><img src="./03-silver-banner.jpg" alt="Silver banner" loading="lazy"><span>Open banner JPG</span></a>
+      </div>
+      <div class="actions"><a class="btn secondary" href="./CLIP-Campaign-Report-2026-09-30.pdf">Open report PDF</a></div>
+    </article>
+  </section>
+</main>
 </body>
 </html>
