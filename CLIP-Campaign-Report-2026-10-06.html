@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Clip , Active Campaign Reports · 2026-10-06</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--g:#0BE802;--g-dark:#24B31A;--g-ink:#063f02;--g-mint:#BDEFB6;
+--night:#0A0A0A;--night-panel:#141414;--night-panel-2:#1a1a1a;--night-panel-3:#202020;
+--ink:#F4F4F3;--ink-2:#d8d6d0;--muted:#a0a0a0;--muted-2:#787878;
+--line:rgba(255,255,255,0.08);--line-2:rgba(255,255,255,0.14);
+--amber:#FFB800;--amber-soft:rgba(255,184,0,.10);--amber-line:rgba(255,184,0,.30);--amber-ink:#FFD66B;
+--blue:#4A8BFF;--blue-soft:rgba(74,139,255,.12);--blue-line:rgba(74,139,255,.32);--blue-ink:#9DBCFF;
+--violet:#9C7BFF;--violet-soft:rgba(156,123,255,.12);--violet-line:rgba(156,123,255,.32);--violet-ink:#C4B0FF;
+--rose:#FF5B79;--rose-soft:rgba(255,91,121,.12);--rose-line:rgba(255,91,121,.32);--rose-ink:#FF9CAE;
+--green-soft:rgba(11,232,2,.10);--green-line:rgba(11,232,2,.30);
+--nm-max:#7FB0FF;--nm-jory:#7CC08C;--nm-justin:#5BD3B5;--nm-emilio:#FF9D6A;--nm-joshua:#E5C079;
+--max:1240px;--pad:clamp(20px,4vw,44px);--card:18px;--pill:999px;
+--serif:'Instrument Serif',serif;--sans:'Geist',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--night);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5}
+body{background-image:radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);background-size:24px 24px}
+.wrap{max-width:var(--max);margin:0 auto;padding:clamp(36px,5vw,72px) var(--pad) 80px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-0.018em;line-height:1.1;padding-bottom:.08em;margin:0;
+background:linear-gradient(180deg,#ffffff 0%,#f4f4f3 42%,#9a9a9a 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+h1{font-size:clamp(48px,7vw,84px);line-height:1.05}
+h2{font-size:clamp(34px,4vw,52px)}
+h3{font-size:clamp(22px,2.4vw,30px)}
+.it{font-style:italic}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.pulse{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--g);margin-right:8px;animation:pulse 1.6s ease infinite;vertical-align:middle}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hdr{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:3.5rem}
+.hdr .sub{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-top:.6rem}
+.hdr-right{text-align:right}
+.hdr-right .day{font-family:var(--serif);font-size:28px;color:var(--ink);-webkit-text-fill-color:var(--ink);background:none}
+.hdr-right .tag{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:.35rem}
+.ov{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:2.5rem}
+.ov .cell{grid-column:span 2;padding:1.4rem 1.5rem 1.55rem;border-radius:var(--card);background:var(--night-panel);border:1px solid var(--line)}
+.ov .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);margin-bottom:1.1rem}
+.ov .val{font-family:var(--serif);font-size:46px;line-height:1;letter-spacing:-0.022em;color:var(--ink);margin-bottom:.55rem;-webkit-text-fill-color:var(--ink);background:none}
+.ov .sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.ov .tint-blue{background:linear-gradient(180deg,var(--blue-soft) 0%,var(--night-panel) 70%);border-color:var(--blue-line)}
+.ov .tint-green{background:linear-gradient(180deg,var(--green-soft) 0%,var(--night-panel) 70%);border-color:var(--green-line)}
+.ov .tint-amber{background:linear-gradient(180deg,var(--amber-soft) 0%,var(--night-panel) 70%);border-color:var(--amber-line)}
+.excl{font-family:var(--mono);font-size:12px;color:var(--muted);margin:0 0 2.5rem;line-height:1.55}
+.sec{margin-top:3.25rem}
+.sec-hd{display:flex;align-items:baseline;gap:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line);margin-bottom:1.5rem;flex-wrap:wrap}
+.sec-hd .count{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.sec-hd.rose h2{background:linear-gradient(180deg,var(--rose-ink) 0%,var(--rose) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sec-hd.green h2{background:linear-gradient(180deg,var(--g-mint) 0%,var(--g) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sec-hd.amber h2{background:linear-gradient(180deg,var(--amber-ink) 0%,var(--amber) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sec-hd.blue h2{background:linear-gradient(180deg,var(--blue-ink) 0%,var(--blue) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sec-hd.muted h2{background:linear-gradient(180deg,#c0c0c0 0%,#808080 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cards{display:flex;flex-direction:column;gap:14px}
+.card{display:grid;grid-template-columns:5px 1fr 200px;background:var(--night-panel);border:1px solid var(--line);border-radius:var(--card);overflow:hidden;transition:border-color .15s}
+.card:hover{border-color:var(--line-2)}
+.card .cbar{background:#5a5a5a}
+.card.green .cbar{background:var(--g)}
+.card.amber .cbar{background:var(--amber)}
+.card.rose .cbar{background:var(--rose)}
+.card.blue .cbar{background:var(--blue)}
+.card.muted .cbar{background:#5a5a5a}
+.card.violet .cbar{background:var(--violet)}
+.main{padding:1.35rem 1.6rem 1.45rem}
+.c-title{font-family:var(--sans);font-weight:600;font-size:19px;letter-spacing:-0.012em;margin-bottom:.45rem}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:.7rem}
+.badge{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;border-radius:var(--pill);padding:3px 9px;line-height:1.4;border:1px solid transparent}
+.badge.green{background:var(--green-soft);color:#9CEC95;border-color:var(--green-line)}
+.badge.amber{background:var(--amber-soft);color:var(--amber-ink);border-color:var(--amber-line)}
+.badge.rose{background:var(--rose-soft);color:var(--rose-ink);border-color:var(--rose-line)}
+.badge.blue{background:var(--blue-soft);color:var(--blue-ink);border-color:var(--blue-line)}
+.badge.muted{background:rgba(255,255,255,.05);color:#a0a0a0;border-color:var(--line-2)}
+.badge.violet{background:var(--violet-soft);color:var(--violet-ink);border-color:var(--violet-line)}
+.meta1{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-bottom:.35rem}
+.meta2{font-family:var(--mono);font-size:11px;color:var(--muted-2);margin-bottom:.9rem}
+.pill-chip{display:inline-flex;align-items:center;gap:6px}
+.pill-chip .dot{width:7px;height:7px;border-radius:50%;display:inline-block}
+.pill-chip .dot.green{background:var(--g)}
+.pill-chip .dot.amber{background:var(--amber)}
+.pill-chip .dot.muted{background:#5a5a5a}
+.note{background:var(--night-panel-2);border-left:3px solid var(--line-2);padding:11px 14px;border-radius:0 10px 10px 0;color:var(--ink-2);font-size:14px;line-height:1.6}
+.card.green .note{border-left-color:var(--g)}
+.card.amber .note{border-left-color:var(--amber)}
+.card.rose .note{border-left-color:var(--rose)}
+.card.blue .note{border-left-color:var(--blue)}
+.card.muted .note{border-left-color:#5a5a5a}
+.note b,.note strong{color:var(--ink);font-weight:600}
+.cm-slot{margin-top:.65rem;font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:.55rem;border-top:1px dashed var(--line)}
+.cm-blank{color:var(--muted-2);font-style:italic}
+.nm{font-weight:600}
+.nm-justin{color:var(--nm-justin)}
+.nm-joshua{color:var(--nm-joshua)}
+.nm-max{color:var(--nm-max)}
+.nm-jory{color:var(--nm-jory)}
+.nm-emilio{color:var(--nm-emilio)}
+.rhs{padding:1.35rem 1.5rem;background:var(--night-panel-2);border-left:1px solid var(--line);display:flex;flex-direction:column}
+.r-lbl{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);margin-bottom:.5rem}
+.r-bpct{font-family:var(--serif);font-size:34px;line-height:1;letter-spacing:-0.02em;color:var(--ink);-webkit-text-fill-color:var(--ink);background:none}
+.r-bpct .pct{font-family:var(--mono);font-size:14px;color:var(--muted);margin-left:1px}
+.prog{width:130px;height:4px;background:var(--night-panel-3);border-radius:4px;margin:.7rem 0 .8rem;overflow:hidden}
+.prog i{display:block;height:100%;background:currentColor;border-radius:4px}
+.card.green .prog i{background:var(--g)}
+.card.amber .prog i{background:var(--amber)}
+.card.rose .prog i{background:var(--rose)}
+.card.blue .prog i{background:var(--blue)}
+.card.muted .prog i{background:#5a5a5a}
+.r-views,.r-paid{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:.25rem}
+.obs-grid{display:grid;gap:14px}
+.why-card{border-radius:22px;padding:1.6rem;min-height:220px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.why-card.rose{background:radial-gradient(120% 90% at 0% 100%,var(--rose-soft) 0%,var(--night-panel) 65%);border:1px solid var(--rose-line)}
+.why-card .huge{font-family:var(--serif);font-style:italic;font-size:140px;position:absolute;top:-20px;right:10px;color:color-mix(in srgb,var(--rose) 50%,transparent);opacity:.32;pointer-events:none;-webkit-text-fill-color:unset;background:none}
+.why-card h3{background:none;-webkit-background-clip:initial;-webkit-text-fill-color:var(--ink);color:var(--ink);font-size:24px;margin:.4rem 0 .8rem}
+.why-card p{font-size:14.5px;color:var(--ink-2);line-height:1.55;margin:0 0 .6rem}
+.why-card .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.pill{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:var(--pill);background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--ink-2)}
+.done{background:var(--night-panel);border:1px solid var(--line);border-radius:var(--card);overflow:hidden}
+.done .row{display:grid;grid-template-columns:5px 1fr 130px 120px 110px;border-bottom:1px solid var(--line)}
+.done .row:last-child{border-bottom:none}
+.done .bar{background:var(--g)}
+.done .row.amber .bar{background:var(--amber)}
+.done .row.muted .bar{background:#5a5a5a}
+.done .row.rose .bar{background:var(--rose)}
+.done .nm{padding:1rem 1.2rem}
+.done .nm .n{font-weight:600;font-size:15px}
+.done .nm .dmeta{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:.25rem}
+.done .col{padding:.75rem .8rem;border-left:1px solid var(--line)}
+.done .col .lbl{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.2rem}
+.done .col .big{font-family:var(--serif);font-size:24px;color:var(--ink);-webkit-text-fill-color:var(--ink);background:none}
+.done .row.muted .col .big{color:var(--ink-2);-webkit-text-fill-color:var(--ink-2)}
+.done .row.rose .col .big{color:var(--rose-ink);-webkit-text-fill-color:var(--rose-ink)}
+.done .col .v{font-family:var(--mono);font-size:11.5px;color:var(--ink-2)}
+footer.ft{border-top:1px solid var(--line);padding-top:1.5rem;margin-top:3.5rem;display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted-2)}
+@media print{
+  *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;color-adjust:exact !important}
+  html,body{background:var(--night) !important;color:var(--ink) !important}
+  body{background-image:none !important}
+  html,body,.wrap{overflow-x:hidden !important}
+  .wrap{padding:1.5rem;max-width:100%}
+  h1,h2,h3{background:none !important;-webkit-background-clip:initial !important;background-clip:initial !important;-webkit-text-fill-color:#f4f4f3 !important;color:#f4f4f3 !important}
+  .sec-hd.rose h2{-webkit-text-fill-color:var(--rose-ink) !important;color:var(--rose-ink) !important}
+  .sec-hd.green h2{-webkit-text-fill-color:#9CEC95 !important;color:#9CEC95 !important}
+  .sec-hd.amber h2{-webkit-text-fill-color:var(--amber-ink) !important;color:var(--amber-ink) !important}
+  .sec-hd.blue h2{-webkit-text-fill-color:var(--blue-ink) !important;color:var(--blue-ink) !important}
+  .sec-hd.muted h2{-webkit-text-fill-color:#a0a0a0 !important;color:#a0a0a0 !important}
+  .why-card h3{-webkit-text-fill-color:var(--ink) !important;color:var(--ink) !important}
+  .ov{grid-template-columns:repeat(3,1fr) !important}
+  .ov .cell{grid-column:span 1 !important}
+  .card{grid-template-columns:5px 1fr 180px !important}
+  .obs-grid{grid-template-columns:1fr !important}
+  .why-card{min-height:0 !important}
+  .huge{font-size:96px !important}
+  .done .row{grid-template-columns:5px 1fr 90px 90px 90px !important}
+  .done .col{padding:.75rem .6rem !important}
+  .main,.note,.why-card p{overflow-wrap:anywhere}
+  .card,.why-card,.ov .cell,.done .row{break-inside:avoid;page-break-inside:avoid}
+  .sec-hd{break-after:avoid;page-break-after:avoid}
+  .sec,.ov,.done,.cards,.obs-grid{break-inside:auto;page-break-inside:auto}
+  .sec{margin-top:2.5rem}
+}
+@page{margin:0.4in;background:#0A0A0A}
+@media(max-width:900px){
+  .ov{grid-template-columns:repeat(2,1fr)}
+  .ov .cell{grid-column:span 1}
+  .card{grid-template-columns:5px 1fr 170px}
+  .done .row{grid-template-columns:5px 1fr 110px}
+  .done .col:nth-child(n+4){display:none}
+  .hdr{flex-direction:column}
+}
+@media(max-width:600px){
+  .card{grid-template-columns:5px 1fr}
+  .cbar{grid-row:1 / span 2}
+  .main{grid-column:2;grid-row:1}
+  .rhs{grid-column:2;grid-row:2;border-left:none;border-top:1px solid var(--line);flex-direction:row;flex-wrap:wrap;gap:.6rem 2rem;align-items:center}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hdr">
+    <div>
+      <div class="eyebrow"><span class="pulse"></span>Report · October 6, 2026 · stats pulled 4:04 PM ET</div>
+      <h1>Active <span class="it">campaigns</span></h1>
+      <div class="sub">27 active · 4 completed (3d) · 470 clippers submitting this week</div>
+    </div>
+    <div class="hdr-right">
+      <div class="day">Day 6 / week 41</div>
+      <div class="tag">Clip · Reports</div>
+    </div>
+  </header>
+
+  
+<div class="ov">
+  <div class="cell">
+    <div class="lbl">Budget</div>
+    <div class="val">$203,106</div>
+    <div class="sub">27 campaigns after exclusion</div>
+  </div>
+  <div class="cell">
+    <div class="lbl">Paid</div>
+    <div class="val">$37,046</div>
+    <div class="sub">18% of budget</div>
+  </div>
+  <div class="cell">
+    <div class="lbl">Remaining</div>
+    <div class="val">$166,060</div>
+    <div class="sub">unspent</div>
+  </div>
+  <div class="cell tint-blue">
+    <div class="lbl">Views</div>
+    <div class="val">28,214,099</div>
+    <div class="sub">6,281 approved clips</div>
+  </div>
+  <div class="cell tint-green">
+    <div class="lbl">Clippers on Active Campaigns</div>
+    <div class="val">528</div>
+    <div class="sub">Oct 1: 450</div>
+  </div>
+  <div class="cell tint-amber">
+    <div class="lbl">Clippers Submitting This Week</div>
+    <div class="val">470</div>
+    <div class="sub">Oct 1: 429</div>
+  </div>
+</div>
+  <p class="excl">Stats pulled Oct 6, 2026 at 4:04 PM ET.</p>
+
+  
+        <section class="sec">
+          
+    <div class="sec-hd rose">
+      <div class="eyebrow">FIG. 01</div>
+      <h2>Action <span class="it">needed</span></h2>
+      <div class="count">10 campaigns</div>
+    </div>
+          <div class="cards">
+    <article class="card rose">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Prince “Purple Rain” Broadway Clipping</div>
+        <div class="badges"><span class="badge rose">DECIDE</span></div>
+        <div class="meta1">Super Awesome Friends · Music · TikTok, YouTube, Instagram · 21 clippers this week · 211 videos</div>
+        <div class="meta2">Started 9/24 · <span class="pill-chip"><span class="dot amber"></span>12 days active</span> · $5,250 budget</div>
+        <div class="note"><b>Status:</b> Under pace. 19.8% of a $5,250 budget after 12 days. 728,643 views off 211 clips. Open task: open to tier 2 + announce new content coming soon (Joshua/Max Oct 5). Time limit expires soon.</div>
+        <div class="cm-slot"><span class="nm nm-justin">Justin</span> pivot: I&#x27;ll open Purple Rain to tier 2 + announce new content coming soon (task open with Rishap) - 19.8% after 12d.</div>
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">19<span class="pct">.8%</span></div>
+          <div class="prog"><i style="width:19.8%"></i></div>
+          <div class="r-views">728,643 views</div>
+          <div class="r-paid">$1,038 / $5,250</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card rose">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Higgsfield CEO Podcast Clipping</div>
+        <div class="badges"><span class="badge rose">DECIDE</span></div>
+        <div class="meta1">Higgsfield · Podcasts · YouTube, Instagram · 44 clippers this week · 166 videos</div>
+        <div class="meta2">Started 9/30 · <span class="pill-chip"><span class="dot green"></span>6 days active</span> · $15,000 budget</div>
+        <div class="note"><b>Status:</b> Stalling hard. 1.7% of a $15,000 budget after 6 days. 199,335 views off 166 clips. CPM was raised to $2 (task complete Oct 3). Still thin for the budget size.</div>
+        <div class="cm-slot"><span class="nm nm-justin">Justin</span> pivot: I&#x27;ll check post-$2 CPM movement with Max/Nico today - 1.7% of $15k after 6 days is too thin.</div>
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">1<span class="pct">.7%</span></div>
+          <div class="prog"><i style="width:1.7%"></i></div>
+          <div class="r-views">199,335 views</div>
+          <div class="r-paid">$251 / $15,000</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card rose">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">🔒 The Devils Movie Clipping</div>
+        <div class="badges"><span class="badge rose">DECIDE</span><span class="badge muted">LOCKED</span><span class="badge muted">TRACKING PAUSED</span></div>
+        <div class="meta1">Clockwork · Film &amp; TV · TikTok · 8 clippers this week · 22 videos</div>
+        <div class="meta2">Started 9/29 · <span class="pill-chip"><span class="dot amber"></span>7 days active</span> · $7,000 budget</div>
+        <div class="note"><b>Status:</b> Ending path in motion. Submissions locked. 2.9% of a $7,000 budget after 7 days. 140,573 views off 22 clips. 24h heads-up task marked complete Oct 5; Mongo still Active.</div>
+        <div class="cm-slot"><span class="nm nm-justin">Justin</span> pivot: I&#x27;ll confirm Mongo flip to Ended/Payouts - 24h heads-up is done, still Active locked at 2.9%.</div>
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">2<span class="pct">.9%</span></div>
+          <div class="prog"><i style="width:2.9%"></i></div>
+          <div class="r-views">140,573 views</div>
+          <div class="r-paid">$202 / $7,000</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card rose">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">🔒 Samara Cyn Podcast</div>
+        <div class="badges"><span class="badge rose">DECIDE</span><span class="badge muted">LOCKED</span><span class="badge muted">TRACKING PAUSED</span></div>
+        <div class="meta1">Samara Cyn · Podcasts · TikTok, YouTube · 21 clippers this week · 80 videos</div>
+        <div class="meta2">Started 9/28 · <span class="pill-chip"><span class="dot amber"></span>8 days active</span> · $2,500 budget</div>
+        <div class="note"><b>Status:</b> Locked near-dead. 0.3% of a $2,500 budget after 8 days. 69,126 views off 80 clips. Decide reopen vs end.</div>
+        <div class="cm-slot"><span class="nm nm-justin">Justin</span> pivot: I&#x27;ll decide reopen vs end with Max - locked at 0.3% after 8 days.</div>
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">0<span class="pct">.3%</span></div>
+          <div class="prog"><i style="width:0.3%"></i></div>
+          <div class="r-views">69,126 views</div>
+          <div class="r-paid">$7 / $2,500</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card rose">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Skyrim Game Clipping</div>
+        <div class="badges"><span class="badge rose">DECIDE</span></div>
+        <div class="meta1">Mother Made · Gaming · TikTok, YouTube, Instagram · 1 clippers this week · 7 videos</div>
+        <div class="meta2">Started 9/23 · <span class="pill-chip"><span class="dot amber"></span>13 days active</span> · $7,516 budget</div>
+        <div class="note"><b>Status:</b> No traction. 0.0% of a $7,516 budget after 13 days. 4,467 views off 7 clips. Time limit expires soon with leftover budget.</div>
+        <div class="cm-slot"><span class="nm nm-justin">Justin</span> pivot: I&#x27;ll push gaming clippers once more; if still flat when the time limit expires I&#x27;ll bring a call (0% / 7 clips / $7.5k).</div>
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">0<span class="pct">%</span></div>
+          <div class="prog"><i style="width:0.0%"></i></div>
+          <div class="r-views">4,467 views</div>
+          <div class="r-paid">$0 / $7,516</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card rose">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">🔒 Spiritbox Live Performance Clipping</div>
+        <div class="badges"><span class="badge rose">DECIDE</span><span class="badge muted">LOCKED</span><span class="badge amber">EXTEND OR END</span><span class="badge muted">TRACKING PAUSED</span></div>
+        <div class="meta1">BMG · Music · TikTok, Instagram · 0 clippers this week · 1 videos</div>
+        <div class="meta2">Started 9/26 · <span class="pill-chip"><span class="dot amber"></span>10 days active</span> · $2,333 budget</div>
+        <div class="note"><b>Status:</b> Time limit expires path: submissions locked and tracking paused. 10 days active, 1 approved clip, 218 views, $0 paid. Pause/end task still open on Justin in Campaign Tasks. Finish early end vs reopen.</div>
+        <div class="cm-slot"><span class="nm nm-justin">Justin</span> pivot: I&#x27;ll finish the early end today (task still open on me) - locked + tracking paused, 1 clip / $0.</div>
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">0<span class="pct">%</span></div>
+          <div class="prog"><i style="width:0.0%"></i></div>
+          <div class="r-views">218 views</div>
+          <div class="r-paid">$0 / $2,333</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card rose">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">🔒 Taco Bell Podcast Clipping</div>
+        <div class="badges"><span class="badge rose">DECIDE</span><span class="badge muted">LOCKED</span><span class="badge muted">TRACKING PAUSED</span></div>
+        <div class="meta1">The Team · Brands · TikTok, YouTube, Instagram · 0 clippers this week · 0 videos</div>
+        <div class="meta2">Started 8/31 · <span class="pill-chip"><span class="dot amber"></span>36 days active</span> · $9,000 budget</div>
+        <div class="note"><b>Status:</b> Locked empty shell. 36 days active, $0 paid, 0 clips on a $9,000 budget. A separate Taco Bell Podcast shell relaunched yesterday unlocked. Decide park vs end this old shell.</div>
+        <div class="cm-slot"><span class="nm nm-justin">Justin</span> pivot: I&#x27;ll park or end this locked $9k shell today unless Max wants it held - new Taco Bell shell is already live.</div>
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">0<span class="pct">%</span></div>
+          <div class="prog"><i style="width:0.0%"></i></div>
+          <div class="r-views">0 views</div>
+          <div class="r-paid">$0 / $9,000</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card rose">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">🔒 Stromedy Retainer Clipping</div>
+        <div class="badges"><span class="badge rose">DECIDE</span><span class="badge muted">LOCKED</span><span class="badge muted">TRACKING PAUSED</span></div>
+        <div class="meta1">Everbloom · Other · TikTok, YouTube, Instagram, X · 0 clippers this week · 0 videos</div>
+        <div class="meta2">Started 8/31 · <span class="pill-chip"><span class="dot amber"></span>35 days active</span> · $1,000 budget</div>
+        <div class="note"><b>Status:</b> Locked empty shell. 35 days active, $0 paid, 0 clips. Decide park vs end.</div>
+        <div class="cm-slot"><span class="nm nm-justin">Justin</span> pivot: I&#x27;ll park or end this locked $1k / 35d empty shell unless you want it held.</div>
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">0<span class="pct">%</span></div>
+          <div class="prog"><i style="width:0.0%"></i></div>
+          <div class="r-views">0 views</div>
+          <div class="r-paid">$0 / $1,000</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card rose">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">KFC Show Clipping</div>
+        <div class="badges"><span class="badge rose">DECIDE</span></div>
+        <div class="meta1">Mother Made · Brands · YouTube, Instagram · 0 clippers this week · 0 videos</div>
+        <div class="meta2">Started 9/25 · <span class="pill-chip"><span class="dot amber"></span>11 days active</span> · $23,093 budget</div>
+        <div class="note"><b>Status:</b> Still empty after 11 days. $0 paid, 0 clips on a $23,093 budget. A new KFC Show shell launched today (~3:50p ET) at $24,750 / $1.50 clipper CPM. Decide end/park this old shell.</div>
+        <div class="cm-slot"><span class="nm nm-justin">Justin</span> pivot: I&#x27;ll end/park this empty $23.1k shell now that the new $24.75k KFC relaunch is live - confirm with Max.</div>
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">0<span class="pct">%</span></div>
+          <div class="prog"><i style="width:0.0%"></i></div>
+          <div class="r-views">0 views</div>
+          <div class="r-paid">$0 / $23,093</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card rose">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Persona 4 Game Clipping</div>
+        <div class="badges"><span class="badge rose">DECIDE</span></div>
+        <div class="meta1">Pubity Group · Gaming · TikTok, YouTube, Instagram · 0 clippers this week · 0 videos</div>
+        <div class="meta2">Started 10/1 · <span class="pill-chip"><span class="dot green"></span>4 days active</span> · $4,375 budget</div>
+        <div class="note"><b>Status:</b> No movement. 4 days active, $0 paid, 0 clips on a $4,375 budget. Unlocked in Mongo.</div>
+        <div class="cm-slot"><span class="nm nm-justin">Justin</span> pivot: I&#x27;ll confirm brief + Discord push with Max - 4 days, $0 / 0 clips on $4.4k.</div>
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">0<span class="pct">%</span></div>
+          <div class="prog"><i style="width:0.0%"></i></div>
+          <div class="r-views">0 views</div>
+          <div class="r-paid">$0 / $4,375</div>
+        </div>
+      </div>
+    </article></div>
+        </section>
+        <section class="sec">
+          
+    <div class="sec-hd amber">
+      <div class="eyebrow">FIG. 02</div>
+      <h2>Under<span class="it">performing</span></h2>
+      <div class="count">1 campaign</div>
+    </div>
+          <div class="cards">
+    <article class="card amber">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Cantina Clipping</div>
+        <div class="badges"><span class="badge amber">UNDERPERFORMING</span><span class="badge amber">HIGH FILTERING</span><span class="badge green">ELITE VIEWS/CLIP</span></div>
+        <div class="meta1">Triptych · Brands · TikTok, YouTube, Instagram · 17 clippers this week · 156 videos</div>
+        <div class="meta2">Started 9/24 · <span class="pill-chip"><span class="dot amber"></span>12 days active</span> · $5,000 budget</div>
+        <div class="note"><b>Status:</b> Mid-run with heavy filtering. 32.8% of a $5,000 budget after 12 days. 2,791,918 views off 156 clips. 25.9% of submissions rejected or blacklisted. Time limit expires soon.</div>
+        <div class="cm-slot"><span class="nm nm-justin">Justin</span> pivot: I&#x27;ll flag the 26% reject rate for a content-review pass before the time limit expires - 32.8% spent.</div>
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">32<span class="pct">.8%</span></div>
+          <div class="prog"><i style="width:32.8%"></i></div>
+          <div class="r-views">2,791,918 views</div>
+          <div class="r-paid">$1,640 / $5,000</div>
+        </div>
+      </div>
+    </article></div>
+        </section>
+        <section class="sec">
+          
+    <div class="sec-hd green">
+      <div class="eyebrow">FIG. 03</div>
+      <h2>Hold / on <span class="it">track</span></h2>
+      <div class="count">6 campaigns</div>
+    </div>
+          <div class="cards">
+    <article class="card green">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Salesforce Clipping</div>
+        <div class="badges"><span class="badge green">HEALTHY</span></div>
+        <div class="meta1">Salesforce · Technology · TikTok, YouTube, Instagram, X · 103 clippers this week · 733 videos</div>
+        <div class="meta2">Started 10/2 · <span class="pill-chip"><span class="dot green"></span>3 days active</span> · $17,500 budget</div>
+        <div class="note"><b>Status:</b> Strong hold. 61.4% of a $17,500 budget in 3 days. 3,827,636 views off 733 clips.</div>
+        
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">61<span class="pct">.4%</span></div>
+          <div class="prog"><i style="width:61.4%"></i></div>
+          <div class="r-views">3,827,636 views</div>
+          <div class="r-paid">$10,740 / $17,500</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card green">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Man with the Silver Case Movie Clipping</div>
+        <div class="badges"><span class="badge green">HEALTHY</span></div>
+        <div class="meta1">DSO Consulting · Film &amp; TV · TikTok, YouTube, Instagram · 64 clippers this week · 734 videos</div>
+        <div class="meta2">Started 9/30 · <span class="pill-chip"><span class="dot green"></span>6 days active</span> · $10,000 budget</div>
+        <div class="note"><b>Status:</b> 30.4% of a $10,000 budget in 6 days. 3,269,827 views. 4.5K views per approved clip. 3% of submissions rejected or blacklisted.</div>
+        
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">30<span class="pct">.4%</span></div>
+          <div class="prog"><i style="width:30.4%"></i></div>
+          <div class="r-views">3,269,827 views</div>
+          <div class="r-paid">$3,035 / $10,000</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card green">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Forever This Ring Movie Clipping</div>
+        <div class="badges"><span class="badge green">HEALTHY</span></div>
+        <div class="meta1">Turnstr+ · Film &amp; TV · TikTok, YouTube, Instagram · 127 clippers this week · 904 videos</div>
+        <div class="meta2">Started 10/2 · <span class="pill-chip"><span class="dot green"></span>4 days active</span> · $3,500 budget</div>
+        <div class="note"><b>Status:</b> Strong hold. 66.2% of a $3,500 budget in 4 days. 2,491,587 views off 904 clips.</div>
+        
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">66<span class="pct">.2%</span></div>
+          <div class="prog"><i style="width:66.2%"></i></div>
+          <div class="r-views">2,491,587 views</div>
+          <div class="r-paid">$2,318 / $3,500</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card green">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Hellraiser Revival Game Clipping</div>
+        <div class="badges"><span class="badge green">HEALTHY</span></div>
+        <div class="meta1">Cherry Pick Talent · Gaming · TikTok, YouTube, Instagram · 29 clippers this week · 474 videos</div>
+        <div class="meta2">Started 9/27 · <span class="pill-chip"><span class="dot amber"></span>9 days active</span> · $7,000 budget</div>
+        <div class="note"><b>Status:</b> On track. 29.5% of a $7,000 budget in 9 days. 2,216,270 views off 474 clips.</div>
+        
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">29<span class="pct">.5%</span></div>
+          <div class="prog"><i style="width:29.5%"></i></div>
+          <div class="r-views">2,216,270 views</div>
+          <div class="r-paid">$2,063 / $7,000</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card green">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Sandisk Stream Clipping</div>
+        <div class="badges"><span class="badge green">HEALTHY</span><span class="badge green">ELITE VIEWS/CLIP</span></div>
+        <div class="meta1">Cheat Code Agency · Streaming · TikTok, YouTube, Instagram · 34 clippers this week · 202 videos</div>
+        <div class="meta2">Started 9/30 · <span class="pill-chip"><span class="dot green"></span>6 days active</span> · $5,000 budget</div>
+        <div class="note"><b>Status:</b> On track. 59.1% of a $5,000 budget in 6 days. 1,969,551 views off 202 clips. Spell Sandisk with lowercase d.</div>
+        
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">59<span class="pct">.1%</span></div>
+          <div class="prog"><i style="width:59.1%"></i></div>
+          <div class="r-views">1,969,551 views</div>
+          <div class="r-paid">$2,957 / $5,000</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card green">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">IKEA Gaming Clipping</div>
+        <div class="badges"><span class="badge green">HEALTHY</span></div>
+        <div class="meta1">Mother Made · Gaming · TikTok, YouTube, Instagram · 27 clippers this week · 440 videos</div>
+        <div class="meta2">Started 9/27 · <span class="pill-chip"><span class="dot amber"></span>9 days active</span> · $4,950 budget</div>
+        <div class="note"><b>Status:</b> On track. 63.7% of a $4,950 budget in 9 days. 1,754,720 views off 440 clips.</div>
+        
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">63<span class="pct">.7%</span></div>
+          <div class="prog"><i style="width:63.7%"></i></div>
+          <div class="r-views">1,754,720 views</div>
+          <div class="r-paid">$3,152 / $4,950</div>
+        </div>
+      </div>
+    </article></div>
+        </section>
+        <section class="sec">
+          
+    <div class="sec-hd blue">
+      <div class="eyebrow">FIG. 04</div>
+      <h2>Just launched / <span class="it">monitoring</span></h2>
+      <div class="count">8 campaigns</div>
+    </div>
+          <div class="cards">
+    <article class="card blue">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Animal Control Season 5: EP 2 TV Show Clipping</div>
+        <div class="badges"><span class="badge green">HOT START</span><span class="badge blue">JUST LAUNCHED</span></div>
+        <div class="meta1">FOX · Film &amp; TV · TikTok, YouTube, Instagram · 77 clippers this week · 269 videos</div>
+        <div class="meta2">Started 10/5 · <span class="pill-chip"><span class="dot green"></span>0 days active</span> · $4,000 budget</div>
+        <div class="note"><b>Status:</b> Hot open on EP2. 33.2% of a $4,000 budget on day one. 1,193,752 views off 269 clips. EP2 setup task completed Oct 5. 12.6% of submissions rejected or blacklisted.</div>
+        
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">33<span class="pct">.2%</span></div>
+          <div class="prog"><i style="width:33.2%"></i></div>
+          <div class="r-views">1,193,752 views</div>
+          <div class="r-paid">$1,327 / $4,000</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card blue">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Peyton Manning NFL Clipping</div>
+        <div class="badges"><span class="badge blue">JUST LAUNCHED</span><span class="badge green">ELITE VIEWS/CLIP</span></div>
+        <div class="meta1">Omaha Productions · Sports · TikTok, YouTube, Instagram · 5 clippers this week · 39 videos</div>
+        <div class="meta2">Started 10/6 · <span class="pill-chip"><span class="dot green"></span>0 days active</span> · $3,500 budget</div>
+        <div class="note"><b>Status:</b> Hot morning open. 18.1% of a $3,500 budget on day one. 435,438 views off 39 clips. All 4 quarters now in content bank (Jory ~2:38p ET); notify clippers.</div>
+        
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">18<span class="pct">.1%</span></div>
+          <div class="prog"><i style="width:18.1%"></i></div>
+          <div class="r-views">435,438 views</div>
+          <div class="r-paid">$633 / $3,500</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card blue">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Josh Richards Show Clipping</div>
+        <div class="badges"><span class="badge blue">JUST LAUNCHED</span></div>
+        <div class="meta1">Crosscheck Studios · Film &amp; TV · TikTok, YouTube, Instagram · 34 clippers this week · 109 videos</div>
+        <div class="meta2">Started 10/6 · <span class="pill-chip"><span class="dot green"></span>0 days active</span> · $3,500 budget</div>
+        <div class="note"><b>Status:</b> Just launched overnight. 6.0% of a $3,500 budget on day one. 167,716 views off 109 clips.</div>
+        
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">6<span class="pct">%</span></div>
+          <div class="prog"><i style="width:6.0%"></i></div>
+          <div class="r-views">167,716 views</div>
+          <div class="r-paid">$210 / $3,500</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card blue">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Ramayana x MrBeast Clipping</div>
+        <div class="badges"><span class="badge blue">JUST LAUNCHED</span></div>
+        <div class="meta1">Sony Films · Film &amp; TV · TikTok, YouTube, Instagram · 23 clippers this week · 58 videos</div>
+        <div class="meta2">Started 10/6 · <span class="pill-chip"><span class="dot green"></span>0 days active</span> · $4,667 budget</div>
+        <div class="note"><b>Status:</b> Just launched today (~12:35p ET). 1.0% of a $4,667 budget. 66,424 views off 58 clips. Jory approved arb Client $7k/$1.50 · Clipper $4.6k/$1.00.</div>
+        
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">1<span class="pct">%</span></div>
+          <div class="prog"><i style="width:1.0%"></i></div>
+          <div class="r-views">66,424 views</div>
+          <div class="r-paid">$46 / $4,667</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card blue">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Taco Bell Podcast Clipping</div>
+        <div class="badges"><span class="badge blue">JUST LAUNCHED</span><span class="badge violet">BIG LAUNCH</span></div>
+        <div class="meta1">The Team · Podcasts · TikTok, Instagram · 0 clippers this week · 0 videos</div>
+        <div class="meta2">Started 10/5 · <span class="pill-chip"><span class="dot green"></span>0 days active</span> · $16,071 budget</div>
+        <div class="note"><b>Status:</b> Relaunch live. Day one, $0 paid, 0 approved clips on a $16,071 budget. Too early to assess.</div>
+        
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">0<span class="pct">%</span></div>
+          <div class="prog"><i style="width:0.0%"></i></div>
+          <div class="r-views">0 views</div>
+          <div class="r-paid">$0 / $16,071</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card blue">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Obie Rewards Clipping</div>
+        <div class="badges"><span class="badge blue">JUST LAUNCHED</span></div>
+        <div class="meta1">Obie Rewards · Streaming · Instagram · 0 clippers this week · 0 videos</div>
+        <div class="meta2">Started 10/6 · <span class="pill-chip"><span class="dot green"></span>0 days active</span> · $2,100 budget</div>
+        <div class="note"><b>Status:</b> Just launched. Day one, $0 paid, 0 approved clips on a $2,100 budget. Too early to assess.</div>
+        
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">0<span class="pct">%</span></div>
+          <div class="prog"><i style="width:0.0%"></i></div>
+          <div class="r-views">0 views</div>
+          <div class="r-paid">$0 / $2,100</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card blue">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Groceries Affordability Crisis Clipping</div>
+        <div class="badges"><span class="badge blue">JUST LAUNCHED</span></div>
+        <div class="meta1">Current Works · Brands · TikTok, YouTube, Instagram · 29 clippers this week · 0 videos</div>
+        <div class="meta2">Started 10/6 · <span class="pill-chip"><span class="dot green"></span>0 days active</span> · $6,000 budget</div>
+        <div class="note"><b>Status:</b> Just launched today (~3:09p ET). $0 paid, 0 approved clips on a $6,000 budget. Too early to assess.</div>
+        
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">0<span class="pct">%</span></div>
+          <div class="prog"><i style="width:0.0%"></i></div>
+          <div class="r-views">0 views</div>
+          <div class="r-paid">$0 / $6,000</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card blue">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">KFC Show Clipping</div>
+        <div class="badges"><span class="badge blue">JUST LAUNCHED</span><span class="badge violet">BIG LAUNCH</span></div>
+        <div class="meta1">Mother Made · Brands · YouTube, Instagram · 0 clippers this week · 0 videos</div>
+        <div class="meta2">Started 10/6 · <span class="pill-chip"><span class="dot green"></span>0 days active</span> · $24,750 budget</div>
+        <div class="note"><b>Status:</b> Just launched today (~3:50p ET, Rishap in #kfc-mothermade-clipping). Same details, $1.50 clipper CPM, applications open. $0 paid, 0 clips so far on a $24,750 budget. Max announced Discord.</div>
+        
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">0<span class="pct">%</span></div>
+          <div class="prog"><i style="width:0.0%"></i></div>
+          <div class="r-views">0 views</div>
+          <div class="r-paid">$0 / $24,750</div>
+        </div>
+      </div>
+    </article></div>
+        </section>
+        <section class="sec">
+          
+    <div class="sec-hd green">
+      <div class="eyebrow">FIG. 05</div>
+      <h2>Closing / at <span class="it">cap</span></h2>
+      <div class="count">2 campaigns</div>
+    </div>
+          <div class="cards">
+    <article class="card green">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">MOLOCH Short Form Clipping</div>
+        <div class="badges"><span class="badge green">CAPPING OUT</span></div>
+        <div class="meta1">Future of Life Institute · Film &amp; TV · TikTok, YouTube, Instagram · 168 clippers this week · 1,204 videos</div>
+        <div class="meta2">Started 9/29 · <span class="pill-chip"><span class="dot green"></span>6 days active</span> · $5,250 budget</div>
+        <div class="note"><b>Status:</b> Capping out. 85.9% of a $5,250 budget after 6 days. 3,674,614 views off 1,204 clips. End/24h heads-up task marked complete Oct 5; content bank swapped to Frame.io. Time limit expires soon.</div>
+        <div class="cm-slot"><span class="nm nm-justin">Justin</span> pivot: I&#x27;ll confirm end timing with Max - 85.9% with time limit expiring soon; 24h heads-up already marked done.</div>
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">85<span class="pct">.9%</span></div>
+          <div class="prog"><i style="width:85.9%"></i></div>
+          <div class="r-views">3,674,614 views</div>
+          <div class="r-paid">$4,512 / $5,250</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card green">
+      <div class="cbar"></div>
+      <div class="main">
+        <div class="c-title">Young Thug Tour Clipping</div>
+        <div class="badges"><span class="badge green">CAPPING OUT</span></div>
+        <div class="meta1">Young Thug · Music · TikTok, YouTube, Instagram · 30 clippers this week · 472 videos</div>
+        <div class="meta2">Started 9/24 · <span class="pill-chip"><span class="dot amber"></span>12 days active</span> · $3,250 budget</div>
+        <div class="note"><b>Status:</b> Capping out. 89.7% of a $3,250 budget after 12 days. 3,212,284 views off 472 clips. 24h end heads-up task marked complete Oct 5; Mongo still Active.</div>
+        <div class="cm-slot"><span class="nm nm-justin">Justin</span> pivot: I&#x27;ll confirm the end flip after the 24h heads-up - 89.7% and still Active.</div>
+      </div>
+      <div class="rhs">
+        <div>
+          <div class="r-lbl">BUDGET</div>
+          <div class="r-bpct">89<span class="pct">.7%</span></div>
+          <div class="prog"><i style="width:89.7%"></i></div>
+          <div class="r-views">3,212,284 views</div>
+          <div class="r-paid">$2,915 / $3,250</div>
+        </div>
+      </div>
+    </article></div>
+        </section>
+        <section class="sec">
+          
+    <div class="sec-hd blue">
+      <div class="eyebrow">FIG. 06</div>
+      <h2>Launch <span class="it">queue</span></h2>
+      <div class="count">8 campaigns</div>
+    </div>
+          <div class="cards">
+            <article class="card blue">
+              <div class="cbar"></div>
+              <div class="main">
+                <div class="c-title">Insidious Clipping</div>
+                <div class="badges"><span class="badge blue">IN QUEUE</span><span class="badge muted">Setup · Oct 9</span></div>
+                <div class="meta1">Not live yet · target budget TBD</div>
+                <div class="note"><b>Status:</b> Setup task open for Oct 9 (Justin + Rishap, requested by Jory). No Active Mongo shell yet.</div>
+              </div>
+              <div class="rhs">
+                <div>
+                  <div class="r-lbl">QUEUE</div>
+                  <div class="r-bpct" style="font-size:22px">Draft</div>
+                  <div class="r-views">TBD target</div>
+                </div>
+              </div>
+            </article>
+            <article class="card blue">
+              <div class="cbar"></div>
+              <div class="main">
+                <div class="c-title">The Artist Show Clipping</div>
+                <div class="badges"><span class="badge blue">IN QUEUE</span><span class="badge muted">Not Started</span></div>
+                <div class="meta1">Not live yet · target budget $3,500</div>
+                <div class="note"><b>Status:</b> Mongo status Not Started. Target budget $3,500. Not live.</div>
+              </div>
+              <div class="rhs">
+                <div>
+                  <div class="r-lbl">QUEUE</div>
+                  <div class="r-bpct" style="font-size:22px">Draft</div>
+                  <div class="r-views">$3,500 target</div>
+                </div>
+              </div>
+            </article>
+            <article class="card blue">
+              <div class="cbar"></div>
+              <div class="main">
+                <div class="c-title">Jaydee &quot;On The Radar&quot; Clipping</div>
+                <div class="badges"><span class="badge blue">IN QUEUE</span><span class="badge muted">Not Started</span></div>
+                <div class="meta1">Not live yet · target budget $2,450</div>
+                <div class="note"><b>Status:</b> Mongo status Not Started. Target budget $2,450. Not live.</div>
+              </div>
+              <div class="rhs">
+                <div>
+                  <div class="r-lbl">QUEUE</div>
+                  <div class="r-bpct" style="font-size:22px">Draft</div>
+                  <div class="r-views">$2,450 target</div>
+                </div>
+              </div>
+            </article>
+            <article class="card blue">
+              <div class="cbar"></div>
+              <div class="main">
+                <div class="c-title">Les Mills RISE Clipping</div>
+                <div class="badges"><span class="badge blue">IN QUEUE</span><span class="badge muted">Not Started</span></div>
+                <div class="meta1">Not live yet · target budget $3,500</div>
+                <div class="note"><b>Status:</b> Mongo status Not Started. Target budget $3,500. Not live.</div>
+              </div>
+              <div class="rhs">
+                <div>
+                  <div class="r-lbl">QUEUE</div>
+                  <div class="r-bpct" style="font-size:22px">Draft</div>
+                  <div class="r-views">$3,500 target</div>
+                </div>
+              </div>
+            </article>
+            <article class="card blue">
+              <div class="cbar"></div>
+              <div class="main">
+                <div class="c-title">Ken Will</div>
+                <div class="badges"><span class="badge blue">IN QUEUE</span><span class="badge muted">Draft</span></div>
+                <div class="meta1">Not live yet · target budget $3,150</div>
+                <div class="note"><b>Status:</b> Mongo status Draft. Target budget $3,150. Not live.</div>
+              </div>
+              <div class="rhs">
+                <div>
+                  <div class="r-lbl">QUEUE</div>
+                  <div class="r-bpct" style="font-size:22px">Draft</div>
+                  <div class="r-views">$3,150 target</div>
+                </div>
+              </div>
+            </article>
+            <article class="card blue">
+              <div class="cbar"></div>
+              <div class="main">
+                <div class="c-title">Romantic Audio Clipping</div>
+                <div class="badges"><span class="badge blue">IN QUEUE</span><span class="badge muted">Not Started</span></div>
+                <div class="meta1">Not live yet · target budget $2,240</div>
+                <div class="note"><b>Status:</b> Mongo status Not Started. Target budget $2,240. Not live.</div>
+              </div>
+              <div class="rhs">
+                <div>
+                  <div class="r-lbl">QUEUE</div>
+                  <div class="r-bpct" style="font-size:22px">Draft</div>
+                  <div class="r-views">$2,240 target</div>
+                </div>
+              </div>
+            </article>
+            <article class="card blue">
+              <div class="cbar"></div>
+              <div class="main">
+                <div class="c-title">The End of Oak Street Movie Clipping</div>
+                <div class="badges"><span class="badge blue">IN QUEUE</span><span class="badge muted">Not Started</span></div>
+                <div class="meta1">Not live yet · target budget $3,010</div>
+                <div class="note"><b>Status:</b> Mongo status Not Started. Target budget $3,010. Not live.</div>
+              </div>
+              <div class="rhs">
+                <div>
+                  <div class="r-lbl">QUEUE</div>
+                  <div class="r-bpct" style="font-size:22px">Draft</div>
+                  <div class="r-views">$3,010 target</div>
+                </div>
+              </div>
+            </article>
+            <article class="card blue">
+              <div class="cbar"></div>
+              <div class="main">
+                <div class="c-title">Cost of Living Meme Clipping</div>
+                <div class="badges"><span class="badge blue">IN QUEUE</span><span class="badge muted">Not Started</span></div>
+                <div class="meta1">Not live yet · target budget $6,000</div>
+                <div class="note"><b>Status:</b> Mongo status Not Started. Target budget $6,000. Not live.</div>
+              </div>
+              <div class="rhs">
+                <div>
+                  <div class="r-lbl">QUEUE</div>
+                  <div class="r-bpct" style="font-size:22px">Draft</div>
+                  <div class="r-views">$6,000 target</div>
+                </div>
+              </div>
+            </article></div>
+        </section>
+        <section class="sec">
+          
+    <div class="sec-hd rose">
+      <div class="eyebrow">FIG. 07</div>
+      <h2>Observed this <span class="it">week</span></h2>
+      <div class="count">portfolio signals</div>
+    </div>
+          <div class="obs-grid" style="grid-template-columns:1fr">
+            <div class="why-card rose">
+              <div class="huge">01</div>
+              <div class="eyebrow">Content review</div>
+              <h3>High filtering on live book</h3>
+              <p>517 of 7,551 submissions were rejected or blacklisted (7%). Denominator is submissions, not approved videos.</p>
+              <p><strong>Worth a content-review pass on the noisy campaigns below.</strong></p>
+              <div class="pills"><span class="pill">Cantina Clipping 26%</span></div>
+            </div>
+          </div>
+        </section>
+        <section class="sec">
+          
+    <div class="sec-hd muted">
+      <div class="eyebrow">FIG. 08</div>
+      <h2>Completed · last 3 <span class="it">days</span></h2>
+      <div class="count">4</div>
+    </div>
+          <div class="done">
+            <div class="row ">
+              <div class="bar"></div>
+              <div class="nm">
+                <div class="n">Ha Vey TV/Movie Edit Clipping</div>
+                <div class="dmeta">Payouts · 2026-10-06 · 111 videos</div>
+              </div>
+              <div class="col"><div class="lbl">Hit</div><div class="big">100.0%</div></div>
+              <div class="col"><div class="lbl">Views</div><div class="v">1,414,720</div></div>
+              <div class="col"><div class="lbl">Paid / Budget</div><div class="v">$2,100 / $2,100</div></div>
+            </div>
+            <div class="row ">
+              <div class="bar"></div>
+              <div class="nm">
+                <div class="n">Healthcare Affordability Crisis Clipping</div>
+                <div class="dmeta">Payouts · 2026-10-06 · 535 videos</div>
+              </div>
+              <div class="col"><div class="lbl">Hit</div><div class="big">100.0%</div></div>
+              <div class="col"><div class="lbl">Views</div><div class="v">7,049,626</div></div>
+              <div class="col"><div class="lbl">Paid / Budget</div><div class="v">$6,000 / $6,000</div></div>
+            </div>
+            <div class="row ">
+              <div class="bar"></div>
+              <div class="nm">
+                <div class="n">TV Shows/Movies Aldae Audio Editing</div>
+                <div class="dmeta">Payouts · 2026-10-06 · 245 videos</div>
+              </div>
+              <div class="col"><div class="lbl">Hit</div><div class="big">100.0%</div></div>
+              <div class="col"><div class="lbl">Views</div><div class="v">2,368,658</div></div>
+              <div class="col"><div class="lbl">Paid / Budget</div><div class="v">$2,333 / $2,333</div></div>
+            </div>
+            <div class="row ">
+              <div class="bar"></div>
+              <div class="nm">
+                <div class="n">AI Regulation Clipping</div>
+                <div class="dmeta">Payouts · 2026-10-05 · 257 videos</div>
+              </div>
+              <div class="col"><div class="lbl">Hit</div><div class="big">100.0%</div></div>
+              <div class="col"><div class="lbl">Views</div><div class="v">5,843,345</div></div>
+              <div class="col"><div class="lbl">Paid / Budget</div><div class="v">$6,000 / $6,000</div></div>
+            </div></div>
+        </section>
+
+  <footer class="ft">
+    <div>Clip · Campaign Reports · 2026-10-06</div>
+    <div>Internal - do not distribute</div>
+  </footer>
+</div>
+</body>
+</html>
